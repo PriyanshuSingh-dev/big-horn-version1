@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tours Page || bighorn || HTML Template For Travel & Tour Booking Agency</title>
+	<!-- favicons Icons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="manifest" href="assets/images/favicons/site.webmanifest">
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Geologica:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/jarallax.css">
+	<link rel="stylesheet" href="css/jquery.magnific-popup.css">
+	<link rel="stylesheet" href="css/daterangepicker.css">
+	<link rel="stylesheet" href="css/style_1.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- template styles -->
+	<link rel="stylesheet" href="css/bighorn.css">
+	<style>
+		/* Section Title */
+		.section-title h2 {
+			font-weight: 700;
+			font-size: 2rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.section-title p {
+			font-size: 1rem;
+			color: #555;
+		}
+
+		/* Season Cards */
+		.season-card {
+			text-align: center;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			overflow: hidden;
+			transition: transform 0.3s ease;
+			height: 100%;
+		}
+
+		.season-card img {
+			width: 100%;
+			height: 180px;
+			object-fit: cover;
+		}
+
+		.season-card strong {
+			display: block;
+			padding: 10px 0;
+			font-weight: 600;
+			font-size: 1rem;
+		}
+
+		.season-card:hover {
+			transform: scale(1.01);
+		}
+
+		.trek-list ul {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		.trek-list li {
+			margin-bottom: 10px;
+		}
+
+		.trek-list a {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			padding: 10px 14px;
+			font-weight: 600;
+			font-size: 1rem;
+			color: #212529;
+			text-decoration: none;
+			border-radius: 6px;
+			transition: all 0.3s ease;
+			background-color: #f8f9fa;
+		}
+
+		.trek-list a::before {
+			font-family: "Font Awesome 6 Free";
+			content: "\f6fc";
+			font-weight: 900;
+			font-size: 1.1rem;
+			margin-right: 5px;
+		}
+
+
+		.trek-list a:hover {
+			background-color: #e0f0ff;
+			color: #007bff;
+			padding-left: 18px;
+		}
+
+		@media (max-width: 575.98px) {
+			.season-card img {
+				height: 120px;
+			}
+
+			.trek-list a {
+				font-size: 0.95rem;
+				padding: 8px 12px;
+			}
+		}
+	</style>
+</head>
+
+<body class="custom-cursor">
+
+
+	<!-- Preloader Icon -->
+
+	<!-- Preloader Icon -->
+	<div class="page-wrapper">
+		<header class="main-header main-header--two sticky-header sticky-header--normal ">
+			<div class="container-fluid">
+				<div class="main-header__inner">
+					<div class="main-header__logo">
+						<a href="index.html">
+							<img src="assets/logo.png" alt="Big Horn Logo" width="165">
+						</a>
+					</div>
+					<nav class="main-header__nav main-menu">
+						<ul class="main-menu__list">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="dropdown">
+								<a href="#">Treks</a>
+								<ul class="sub-menu">
+									<li class="dropdown">
+										<a href="#">Upcoming Treks</a>
+										<ul class="sub-menu">
+											<li><a href="tour-details.html">first Trek</a></li>
+											<li><a href="tour-details.html">second trek</a></li>
+											<li><a href="tour-details.html">third trek</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+                                        <a href="tour.html">All Treks</a>
+                                 
+                                    </li>
+								</ul>
+							</li>
+							<li>
+								<a href="about.html">About</a>
+							</li>
+
+							<li>
+								<a href="sustainability.html">Sustainability</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="main-header__right">
+						<div class="main-header__btn">
+							<a href="contact.html" class=""
+								style="background-color: #FF6600; color: white; padding: 12px 18px; border-radius: 5px; text-decoration: none;">
+								<span>Contact Us</span>
+							</a>
+						</div>
+
+						<div class="mobile-nav__btn mobile-nav__toggler">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="page-header">
+			<div class="page-header__bg"></div><!-- /.page-header__bg -->
+			 
+		</section><!-- /.page-header -->
+		<div class="sec-title text-center pt-5">
+			<h3 class="sec-title__title">Treks & Trails By Bighorn</h3>
+			<p class="sec-title__text ">content of a page when looking at layout the point
+				<br> of using lorem the is Ipsum less normal
+			</p>
+		</div>
+		<section class="tours-one">
+			<div class="container">
+				<div class="sec-title text-center">
+					<h3 class="sec-title__title bw-split-in-left fs-1">Top Destinations</h3>
+					<p class="sec-title__text bw-split-in-up-fast">content of a page when looking at layout the point
+
+					</p>
+				</div>
+				<div class="tours-one__carousel bighorn-owl__carousel bighorn-owl__carousel--basic-nav owl-carousel"
+					data-owl-options='{
+						"loop": false,
+						"items": 1,
+						"nav": false,
+						"dots": true,
+						"margin": 24,
+						"responsive": {
+							"0": { "items": 1 },
+							"768": { "items": 2 },
+							"992": { "items": 2 },
+							"1200": { "items": 3 }
+						}
+					}'>
+					<!-- Place your .item blocks here -->
+					<div class="item">
+						<div class="tours-one__item">
+							<img src="images/tours-1-1.jpg" alt="bighorn">
+							<div class="tours-one__item__offer">40% off</div>
+							<div class="tours-one__item__content">
+								<div class="tours-one__item__feature">Featured</div>
+								<div class="tours-one__item__price">$385.<span>00</span></div>
+								<h3 class="tours-one__item__title"><a href="tour-details.html">Over Turkish Waves</a>
+								</h3>
+								<ul class="tours-one__item__meta list-unstyled">
+									<li><span>5.0</span>245 Rating</li>
+									<li><i class="flaticon-pin-1"></i>US, Alaska</li>
+								</ul>
+							</div>
+							<div class="tours-one__item__btn">
+								<a class="img-popup" href="assets/images/tours/tours-1-3.jpg"><i
+										class="flaticon-camera-1"></i></a>
+								<!-- <a class="video-popup" href="https://www.youtube.com/watch?v=G49_MdP0klg"><i
+                                        class="flaticon-video"></i></a> -->
+							</div>
+						</div>
+					</div>
+					<!-- Add more .item blocks as needed -->
+					<!-- Place your .item blocks here -->
+					<div class="item">
+						<div class="tours-one__item">
+							<img src="images/tours-1-1.jpg" alt="bighorn">
+							<div class="tours-one__item__offer">40% off</div>
+
+							<div class="tours-one__item__content">
+								<div class="tours-one__item__feature">Featured</div>
+								<div class="tours-one__item__price">$385.<span>00</span></div>
+								<h3 class="tours-one__item__title"><a href="tour-details.html">Over Turkish Waves</a>
+								</h3>
+								<ul class="tours-one__item__meta list-unstyled">
+									<li><span>5.0</span>245 Rating</li>
+									<li><i class="flaticon-pin-1"></i>US, Alaska</li>
+								</ul>
+							</div>
+							<div class="tours-one__item__btn">
+								<a class="img-popup" href="images/tours-1-3.jpg"><i class="flaticon-camera-1"></i></a>
+								
+							</div>
+						</div>
+					</div> <!-- Place your .item blocks here -->
+					<div class="item">
+						<div class="tours-one__item">
+							<img src="images/tours-1-1.jpg" alt="bighorn">
+							<div class="tours-one__item__offer">40% off</div>
+
+							<div class="tours-one__item__content">
+								<div class="tours-one__item__feature">Featured</div>
+								<div class="tours-one__item__price">$385.<span>00</span></div>
+								<h3 class="tours-one__item__title"><a href="tour-details.html">Over Turkish Waves</a>
+								</h3>
+								<ul class="tours-one__item__meta list-unstyled">
+									<li><span>5.0</span>245 Rating</li>
+									<li><i class="flaticon-pin-1"></i>US, Alaska</li>
+								</ul>
+							</div>
+							<div class="tours-one__item__btn">
+								<a class="img-popup" href="images/tours-1-3.jpg"><i class="flaticon-camera-1"></i></a>
+
+							</div>
+						</div>
+					</div> <!-- Place your .item blocks here -->
+					<div class="item">
+						<div class="tours-one__item">
+							<img src="images/tours-1-1.jpg" alt="bighorn">
+							<div class="tours-one__item__offer">40% off</div>
+
+							<div class="tours-one__item__content">
+								<div class="tours-one__item__feature">Featured</div>
+								<div class="tours-one__item__price">$385.<span>00</span></div>
+								<h3 class="tours-one__item__title"><a href="tour-details.html">Over Turkish Waves</a>
+								</h3>
+								<ul class="tours-one__item__meta list-unstyled">
+									<li><span>5.0</span>245 Rating</li>
+									<li><i class="flaticon-pin-1"></i>US, Alaska</li>
+								</ul>
+							</div>
+							<div class="tours-one__item__btn">
+								<a class="img-popup" href="images/tours-1-3.jpg"><i class="flaticon-camera-1"></i></a>
+
+							</div>
+						</div>
+					</div> <!-- Place your .item blocks here -->
+					<div class="item">
+						<div class="tours-one__item">
+							<img src="images/tours-1-1.jpg" alt="bighorn">
+							<div class="tours-one__item__offer">40% off</div>
+
+							<div class="tours-one__item__content">
+								<div class="tours-one__item__feature">Featured</div>
+								<div class="tours-one__item__price">$385.<span>00</span></div>
+								<h3 class="tours-one__item__title"><a href="tour-details.html">Over Turkish Waves</a>
+								</h3>
+								<ul class="tours-one__item__meta list-unstyled">
+									<li><span>5.0</span>245 Rating</li>
+									<li><i class="flaticon-pin-1"></i>US, Alaska</li>
+								</ul>
+							</div>
+							<div class="tours-one__item__btn">
+								<a class="img-popup" href="images/tours-1-3.jpg"><i class="flaticon-camera-1"></i></a>
+
+							</div>
+						</div>
+					</div> <!-- Place your .item blocks here -->
+					<div class="item">
+						<div class="tours-one__item">
+							<img src="images/tours-1-1.jpg" alt="bighorn">
+							<div class="tours-one__item__offer">40% off</div>
+
+							<div class="tours-one__item__content">
+								<div class="tours-one__item__feature">Featured</div>
+								<div class="tours-one__item__price">$385.<span>00</span></div>
+								<h3 class="tours-one__item__title"><a href="tour-details.html">Over Turkish Waves</a>
+								</h3>
+								<ul class="tours-one__item__meta list-unstyled">
+									<li><span>5.0</span>245 Rating</li>
+									<li><i class="flaticon-pin-1"></i>US, Alaska</li>
+								</ul>
+							</div>
+							<div class="tours-one__item__btn">
+								<a class="img-popup" href="images/tours-1-3.jpg"><i class="flaticon-camera-1"></i></a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-5">
+			<div class="container py-5 px-3">
+				<div class="row align-items-start">
+					<!-- Left Content -->
+					<div class="row align-items-center justify-content-center">
+						<!-- Left Content -->
+						<div class="col-md-4 mb-4 mb-md-0 ">
+							<h1 class="fw-bold">Find Treks by Regions</h1>
+							<p>Find the perfect trek for yourself from below regions</p>
+						</div>
+
+						<!-- Right Grid -->
+						<div class="col-lg-8 col-md-12">
+							<div class="row g-3">
+								<!-- Card 1 -->
+								<div class="col-12 col-sm-6 col-md-4">
+									<div class="card border-0 shadow-sm">
+										<div class="position-relative"
+											style="height: 180px; overflow: hidden; border-radius: 8px;">
+											<img src="images/tours-1-1.jpg" class="w-100 h-100"
+												style="object-fit: cover;" alt="Uttarakhand">
+											<div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center p-2"
+												style="background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);">
+												<h4 class="text-white fw-bold m-0">UTTARAKHAND</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Repeat for Other Cards -->
+								<div class="col-12 col-sm-6 col-md-4">
+									<div class="card border-0 shadow-sm">
+										<div class="position-relative"
+											style="height: 180px; overflow: hidden; border-radius: 8px;">
+											<img src="images/tours-1-1.jpg" class="w-100 h-100"
+												style="object-fit: cover;" alt="Himachal">
+											<div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center p-2"
+												style="background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);">
+												<h4 class="text-white fw-bold m-0">HIMACHAL</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 col-sm-6 col-md-4">
+									<div class="card border-0 shadow-sm">
+										<div class="position-relative"
+											style="height: 180px; overflow: hidden; border-radius: 8px;">
+											<img src="images/tours-1-1.jpg" class="w-100 h-100"
+												style="object-fit: cover;" alt="Sikkim">
+											<div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center p-2"
+												style="background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);">
+												<h4 class="text-white fw-bold m-0">SIKKIM</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Add more cards below as needed -->
+								<div class="col-12 col-sm-6 col-md-4">
+									<div class="card border-0 shadow-sm">
+										<div class="position-relative"
+											style="height: 180px; overflow: hidden; border-radius: 8px;">
+											<img src="images/tours-1-1.jpg" class="w-100 h-100"
+												style="object-fit: cover;" alt="Region">
+											<div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center p-2"
+												style="background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);">
+												<h4 class="text-white fw-bold m-0">REGION</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4">
+									<div class="card border-0 shadow-sm">
+										<div class="position-relative"
+											style="height: 180px; overflow: hidden; border-radius: 8px;">
+											<img src="images/tours-1-1.jpg" class="w-100 h-100"
+												style="object-fit: cover;" alt="Region">
+											<div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center p-2"
+												style="background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);">
+												<h4 class="text-white fw-bold m-0">REGION</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4">
+									<div class="card border-0 shadow-sm">
+										<div class="position-relative"
+											style="height: 180px; overflow: hidden; border-radius: 8px;">
+											<img src="images/tours-1-1.jpg" class="w-100 h-100"
+												style="object-fit: cover;" alt="Region">
+											<div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center p-2"
+												style="background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);">
+												<h4 class="text-white fw-bold m-0">REGION</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Repeat or remove as needed -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+		<div class="container py-5">
+			<!-- Section Title -->
+			<div class="section-title text-center mb-4">
+				<h1 class="fw-bold">Find Treks by Seasons</h1>
+				<p>Find the perfect trek for yourself from below regions</p>
+			</div>
+
+			<!-- Season Cards -->
+			<div class="container py-5">
+
+
+				<div class="row g-3 justify-content-center">
+					<!-- Repeat this block for each season -->
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="season-card text-center p-2 border rounded shadow-sm h-100">
+							<img src="images/tours-1-1.jpg" alt="Autumn" class="img-fluid rounded mb-2"
+								style="height: 120px; object-fit: cover; width: 100%;" />
+							<strong>AUTUMN</strong>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="season-card text-center p-2 border rounded shadow-sm h-100">
+							<img src="images/tours-1-2.jpg" alt="Winter" class="img-fluid rounded mb-2"
+								style="height: 120px; object-fit: cover; width: 100%;" />
+							<strong>WINTERS</strong>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="season-card text-center p-2 border rounded shadow-sm h-100">
+							<img src="images/tours-1-3.jpg" alt="Spring" class="img-fluid rounded mb-2"
+								style="height: 120px; object-fit: cover; width: 100%;" />
+							<strong>SPRING</strong>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="season-card text-center p-2 border rounded shadow-sm h-100">
+							<img src="images/tours-2-3.jpg" alt="Summer" class="img-fluid rounded mb-2"
+								style="height: 120px; object-fit: cover; width: 100%;" />
+							<strong>SUMMER</strong>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="season-card text-center p-2 border rounded shadow-sm h-100">
+							<img src="images/tours-2-2.jpg" alt="Monsoon" class="img-fluid rounded mb-2"
+								style="height: 120px; object-fit: cover; width: 100%;" />
+							<strong>MONSOON</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Trek List -->
+			<div class="trek-list px-3 px-md-5 mt-5">
+				<h1 class="text-center mb-5">List of All Himalayan Treks</h1>
+				<div class="row">
+					<div class="col-12 col-sm-6 col-md-4">
+						<ul>
+							<li><a href="trek.html?name=brahmatal">Brahmatal Trek</a></li>
+							<li><a href="trek.html?name=dodital">Dodital Darwa Pass Trek</a></li>
+							<li><a href="trek.html?name=goechala">Goechala Trek</a></li>
+							<li><a href="trek.html?name=gulabi-kantha">Gulabi Kantha Trek</a></li>
+							<li><a href="trek.html?name=hampta-pass">Hampta Pass Trek</a></li>
+							<li><a href="trek.html?name=rudranath">Rudranath Trek</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4">
+						<ul>
+							<li><a href="trek.html?name=har-ki-dun">Har Ki Dun Trek</a></li>
+							<li><a href="trek.html?name=kedarkantha">Kedarkantha Trek</a></li>
+							<li><a href="trek.html?name=kuari-pass">Kuari Pass Trek</a></li>
+							<li><a href="trek.html?name=markha-valley">Markha Valley Trek</a></li>
+							<li><a href="trek.html?name=nag-tibba">Nag Tibba Trek</a></li>
+							<li><a href="trek.html?name=chardham">Chardham Yatra</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4">
+						<ul>
+							<li><a href="trek.html?name=saptarishi">Saptarishi Trek</a></li>
+							<li><a href="trek.html?name=sarutal">Sarutal Trek</a></li>
+							<li><a href="trek.html?name=tungnath">Tungnath Chandrashila Trek</a></li>
+							<li><a href="trek.html?name=valley-of-flowers">Valley of Flowers Trek</a></li>
+							<li><a href="trek.html?name=panch-kedar">Panch Kedar</a></li>
+							<li><a href="trek.html?name=dayara-bugyal">Dayara Bugyal</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-xl-4 wow fadeInUp " data-wow-delay="00ms">
+						<div class="footer-widget footer-widget--about">
+							<a href="index.html" class="footer-widget__logo">
+								<img src="assets/logo.png" width="185" alt="bighorn HTML Template">
+							</a>
+							<p class="footer-widget__text">
+								Content of a page when looking at layout the<br> point of using lorem the is Ipsum less
+								when<br> looking normal
+							</p>
+							<div class="main-footer__social">
+								<a href="https://facebook.com">
+									<i class="fab fa-facebook-f" aria-hidden="true"></i>
+									<span class="sr-only">Facebook</span>
+								</a>
+								<a href="https://twitter.com">
+									<i class="fab fa-twitter" aria-hidden="true"></i>
+									<span class="sr-only">Twitter</span>
+								</a>
+								<a href="https://linkedin.com">
+									<i class="fab fa-linkedin-in" aria-hidden="true"></i>
+									<span class="sr-only">Linkedin</span>
+								</a>
+								<a href="https://instagram.com">
+									<i class="fab fa-instagram" aria-hidden="true"></i>
+									<span class="sr-only">Instagram</span>
+								</a>
+							</div><!-- /.main-footer__social -->
+						</div><!-- /.footer-widget -->
+					</div><!-- /.col-md-6 -->
+					<div class="col-md-6 col-xl-2 wow fadeInUp" data-wow-delay="100ms">
+						<div class="footer-widget footer-widget--links">
+							<h2 class="footer-widget__title">Useful Links</h2><!-- /.footer-widget__title -->
+							<ul class="list-unstyled footer-widget__links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About us</a></li>
+								<li><a href="destination.html">Destination</a></li>
+								<li><a href="blog-grid-right.html">Blog</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+							</ul><!-- /.list-unstyled footer-widget__links -->
+						</div><!-- /.footer-widget -->
+					</div><!-- /.col-md-6 -->
+					<div class="col-md-6 col-xl-2 wow fadeInUp" data-wow-delay="200ms">
+						<div class="footer-widget footer-widget--links-two">
+							<h2 class="footer-widget__title">Legal</h2><!-- /.footer-widget__title -->
+							<ul class="list-unstyled footer-widget__links">
+								<li><a href="contact.html">Terms of use</a></li>
+								<li><a href="about.html">Terms & conditions</a></li>
+								<li><a href="pricing.html">Privacy policy</a></li>
+								<li><a href="login.html">Cookie policy</a></li>
+							</ul><!-- /.list-unstyled footer-widget__links -->
+						</div><!-- /.footer-widget -->
+					</div><!-- /.col-md-6 -->
+					<div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="300ms">
+						<div class="footer-widget footer-widget--gallery">
+							<h2 class="footer-widget__title">Our Gallery</h2><!-- /.footer-widget__title -->
+							<div class="footer-widget__gallery">
+								<a href="assets/images/resources/gallery-1.jpg">
+									<img src="images/gallery-1.jpg" alt="bighorn">
+								</a><!-- /.image-item -->
+								<a href="assets/images/resources/gallery-2.jpg">
+									<img src="images/gallery-2.jpg" alt="bighorn">
+								</a><!-- /.image-item -->
+							</div>
+						</div><!-- /.footer-widget -->
+					</div><!-- /.col-md-6 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+			<div class="main-footer__bottom  wow fadeInUp" data-wow-delay="00ms">
+				<div class="container">
+					<div class="main-footer__bottom__inner">
+						<p class="main-footer__copyright">
+							© Copyright <span class="dynamic-year"></span> by bighorn 
+						</p>
+					</div><!-- /.main-footer__inner -->
+				</div><!-- /.container -->
+			</div><!-- /.main-footer__bottom -->
+		</footer><!-- /.main-footer -->
+
+	</div><!-- /.page-wrapper -->
+
+
+	<div class="mobile-nav__wrapper">
+		
+		<!-- /.mobile-nav__overlay -->
+		<div class="mobile-nav__content">
+			<span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+			<div class="logo-box">
+				<a href="index.html" aria-label="logo image"><img src="assets/logo.png" width="145" alt="bighorn"></a>
+			</div>
+			<!-- /.logo-box -->
+			<div class="mobile-nav__container"></div>
+			<!-- /.mobile-nav__container -->
+			<a href="contact.html"
+				style="background-color: #FF6600; color: white; padding: 12px; border-radius: 5px; text-decoration: none; display: block; width: 100%; text-align: center; margin-top: 15px;">
+				<span>Contact Us</span>
+			</a>
+
+			<ul class="mobile-nav__contact list-unstyled">
+				<li>
+					<i class="fa fa-envelope"></i>
+					<a href="mailto:needhelp@bighorn.com">needhelp@bighorn.com</a>
+				</li>
+				<li>
+					<i class="fa fa-phone-alt"></i>
+					<a href="tel:666-888-0000">666 888 0000</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.mobile-nav__content -->
+	</div>
+
+
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/jarallax.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.appear.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/wNumb.min.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/daterangepicker.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="js/imagesloaded.min.js"></script>
+	<script src="js/isotope.js"></script>
+	<script src="js/simpleParallax.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/countdown.min.js"></script>
+	<!-- gsap js -->
+	<script src="js/gsap.js"></script>
+	<script src="js/scrolltrigger.min.js"></script>
+	<script src="js/splittext.min.js"></script>
+	<script src="js/bighorn-split.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+	<!-- template js -->
+	<script src="js/bighorn.js"></script>
+
+
+</body>
+
+</html>
