@@ -2067,6 +2067,7 @@ h6 {
   position: relative;
   padding-top: 90px;
   padding-bottom: 90px;
+  /* height: ; */
 
   @media (min-width: 768px) {
     padding-top: 200px;
@@ -2082,11 +2083,105 @@ h6 {
    background-position: center;
    opacity: 0.75;
   width: 100%;
-  height: 558px;
+   height: 300px;
   background-size: cover;
   background-repeat: repeat-x;
  
-  background-image: url(../images/treks/lake3.jpg);
+  background-image: url(../images/treks/flower5.jpg);
+
+  @media (max-width: 767px) {
+    height: 95px;
+  }
+}
+.page-header__beas {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+   background-position: top;
+   opacity: 0.75;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url(../images/treks/beas-kund.jpeg);
+
+  @media (max-width: 767px) {
+    height: 95px;
+  }
+}
+.page-header__Bhirgu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+   /* background-position: center; */
+   opacity: 0.75;
+   object-fit: cover;
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url(../images/treks/bhrigu-lake.jpeg);
+
+  @media (max-width: 767px) {
+    height: 95px;
+  }
+}
+.page-header__hampta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+   background-position: top;
+   opacity: 0.75;
+   object-fit: cover;
+  width: 100%;
+  height:350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url(../images/treks/hampta-pass-trek.jpeg);
+
+  @media (max-width: 767px) {
+    height: 95px;
+  }
+}
+.page-header__valley{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+   background-position: center;
+   opacity: 0.75;
+   object-fit: cover;
+  width: 100%;
+  height:300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url(../images/treks/Valley-of-flower.jpeg);
+
+  @media (max-width: 767px) {
+    height: 95px;
+  }
+}
+.page-header__harki {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+   background-position: top;
+   opacity: 0.75;
+   object-fit: cover;
+  width: 100%;
+  height: 440px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url(../images/treks/har-ki-kund.jpeg);
 
   @media (max-width: 767px) {
     height: 95px;
@@ -6567,7 +6662,7 @@ h6 {
   width: 100%;
   height: 100%;
   content: '';
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.9999999999999999) 100%);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 
@@ -7444,8 +7539,9 @@ h6 {
 
 .tours-details__image img {
   width: 100%;
-  height: auto;
+  height:40rem;
   border-radius: 12px;
+  object-fit: cover;
 }
 
 .tours-details__content {
@@ -7509,7 +7605,7 @@ h6 {
 
 .tours-details__gallery img {
   width: 100%;
- 
+ object-fit: cover;
   border-radius: 12px;
 }
 
@@ -7629,7 +7725,7 @@ h6 {
   border: none;
   height: 476px;
   width: 100%;
-  mix-blend-mode: luminosity;
+  /* mix-blend-mode: luminosity; */
 
   @media (max-width: 767px) {
     height: 400px;
@@ -8154,6 +8250,7 @@ input[type="number"] {
 
 .gallery-one__card img {
   transform: scale(1);
+ object-fit: cover;
   width: 100%;
   transition: transform 500ms ease, opacity 500ms ease;
   opacity: 1;
@@ -11760,8 +11857,9 @@ input[type="number"] {
 --------------------------------------------------------------*/
 .main-footer {
   position: relative;
-  background-color: #021713;
-  padding-top: 10rem;
+  background-color: whitesmoke;
+  color: black;
+  padding-top: 5rem;
 }
 
 .main-footer__top {
@@ -11891,7 +11989,8 @@ input[type="number"] {
 
 .main-footer .container {
   position: relative;
-  padding-bottom: 2rem;
+  padding-bottom: 0.2rem;
+  
 }
 
 .main-footer__bottom {
@@ -11901,20 +12000,22 @@ input[type="number"] {
 .main-footer__bottom__inner {
   position: relative;
   border-top: 1px solid rgba(var(--bighorn-white-rgb), 0.1);
-  padding: 2rem 0;
+  padding: 0.5rem 0;
 }
 
 .main-footer__copyright {
   margin: 0;
   font-size: 16px;
   font-family: var(--bighorn-heading-font);
-  color: var(--bighorn-white);
+  /* color: var(--bighorn-white); */
+  color: black;
 }
 
 .main-footer__social {
   display: flex;
   position: relative;
   gap: 10px;
+  color: black;
 }
 
 .main-footer__social a {
@@ -11925,9 +12026,11 @@ input[type="number"] {
   align-items: center;
   background-color: rgba(var(--bighorn-white-rgb), 0.3);
   font-size: 10px;
-  color: var(--bighorn-white);
+  /* color: var(--bighorn-white); */
+    color: black;
   transition: all 500ms ease;
   border-radius: 5px;
+  background-color: #fe6f01;
 }
 
 .main-footer__social a i {
@@ -11936,11 +12039,13 @@ input[type="number"] {
   display: inline-block;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+    color: white;
 }
 
 .main-footer__social a:hover {
   background-color: var(--bighorn-base);
   color: var(--bighorn-white);
+
 }
 
 .main-footer__social a:hover i {
@@ -11959,14 +12064,16 @@ input[type="number"] {
 .footer-widget__title {
   font-size: 24px;
   font-weight: 500;
-  color: var(--bighorn-white);
+  /* color: var(--bighorn-white); */
+  color: black;
   text-transform: capitalize;
   margin: -4px 0 32px;
 }
 
 .footer-widget__text {
   line-height: 150%;
-  color: RGBA(var(--bighorn-white-rgb), 0.5);
+  /* color: RGBA(var(--bighorn-white-rgb), 0.5); */
+  color: black;
   margin: 0 0 20px;
 }
 
@@ -11993,7 +12100,8 @@ input[type="number"] {
 
 .footer-widget__links li {
   font-size: 18px;
-  color: RGBA(var(--bighorn-white-rgb), 0.5);
+  /* color: RGBA(var(--bighorn-white-rgb), 0.5); */
+  color: black;
   line-height: 40px;
   position: relative;
 }
