@@ -2080,108 +2080,113 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-   background-position: center;
-   opacity: 0.75;
+  background-position: center;
+  opacity: 0.75;
   width: 100%;
-   height: 300px;
+  height: 300px;
   background-size: cover;
   background-repeat: repeat-x;
- 
+
   background-image: url(../images/treks/humta4.jpg);
 
   @media (max-width: 767px) {
     height: 95px;
   }
 }
+
 .page-header__beas {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  
-   background-position: top;
-   opacity: 0.75;
+
+  background-position: top;
+  opacity: 0.75;
   width: 100%;
   height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image:url(../images/treks/beas-kund.jpeg);
+  background-image: url(../images/treks/beas-kund.jpeg);
 
   @media (max-width: 767px) {
     height: 95px;
   }
 }
+
 .page-header__bhirgu {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  
-   /* background-position: center; */
-   opacity: 0.75;
-   object-fit: cover;
+
+  /* background-position: center; */
+  opacity: 0.75;
+  object-fit: cover;
   width: 100%;
   height: 450px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image:url(../images/treks/bhrigu-lake.jpeg);
+  background-image: url(../images/treks/bhrigu-lake.jpeg);
 
   @media (max-width: 767px) {
     height: 95px;
   }
 }
+
 .page-header__hampta {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  
-   background-position: top;
-   opacity: 0.75;
-   object-fit: cover;
+
+  background-position: top;
+  opacity: 0.75;
+  object-fit: cover;
   width: 100%;
-  height:350px;
+  height: 350px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image:url(../images/treks/hampta-pass-trek.jpeg);
+  background-image: url(../images/treks/hampta-pass-trek.jpeg);
 
   @media (max-width: 767px) {
     height: 95px;
   }
 }
-.page-header__valley{
+
+.page-header__valley {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  
-   background-position: center;
-   opacity: 0.75;
-   object-fit: cover;
+
+  background-position: center;
+  opacity: 0.75;
+  object-fit: cover;
   width: 100%;
-  height:300px;
+  height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image:url(../images/treks/Valley-of-flower.jpeg);
+  background-image: url(../images/treks/Valley-of-flower.jpeg);
 
   @media (max-width: 767px) {
     height: 95px;
   }
 }
+
 .page-header__harki {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  
-   background-position: top;
-   opacity: 0.75;
-   object-fit: cover;
+
+  background-position: top;
+  opacity: 0.75;
+  object-fit: cover;
   width: 100%;
   height: 440px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image:url(../images/treks/har-ki-kund.jpeg);
+  background-image: url(../images/treks/har-ki-kund.jpeg);
 
   @media (max-width: 767px) {
     height: 95px;
@@ -2493,22 +2498,27 @@ h6 {
   left: 0;
   width: 100%;
   z-index: 999;
-  /* background-color: var(--bighorn-black); */
-  /* background-color: #002B5B; */
+   background-color: rgba(255, 255, 255, 0.6); /* 0.6 = 60% white, 40% transparent */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 
-.main-header {
-  position: relative;
+
+/* .main-header {
+  position: fixed;
   width: 100%;
   z-index: 9;
-  background-color: var(--bighorn-black);
-} */
+ background-color: rgba(255, 255, 255, 0.3) transparent !important;
+ 
+   
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+}    */
 .main-header__inner {
   display: flex;
   align-items: center;
-  /* background-color: var(--bighorn-white); */
-  /* background-color: #002B5B; */
+  /* background-color: var(--bighorn-white);
+  background-color: #002B5B; */
   border-radius: 30px 30px 0px 0px;
   position: relative;
   padding-right: 24px;
@@ -2522,7 +2532,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   border-radius: 30px 0px 30px 0px;
-  width: auto;
+  /* width: auto; */
 }
 
 .main-header__btn {
@@ -2587,6 +2597,8 @@ h6 {
   right: 0;
   z-index: 999;
   top: 0;
+ 
+
   background-color: var(--bighorn-white);
   transform: translateY(-100%);
   box-shadow: 0px 3px 18px rgba(var(--bighorn-black-rgb), 0.07);
@@ -3138,7 +3150,7 @@ h6 {
   }
 }
 
- 
+
 
 @media (max-width: 575px) {
   .hero-two__image__item-three {
@@ -3146,7 +3158,7 @@ h6 {
   }
 }
 
- 
+
 
 .hero-two__image__item-one {
   top: 52px;
@@ -3669,6 +3681,18 @@ h6 {
 @media (max-width: 991px) {
   .hero-one {
     padding: 90px 0 110px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-one img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .hero-one {
+    padding: 60px 0;
   }
 }
 
@@ -4543,7 +4567,7 @@ h6 {
   width: 200%;
   z-index: 1;
 }
- 
+
 
 .destination-one__content {
   position: absolute;
@@ -4630,7 +4654,7 @@ h6 {
   z-index: 2;
 }
 
- 
+
 
 .destination-two {
   position: relative;
@@ -4652,7 +4676,7 @@ h6 {
   transform: scale(1.1);
 }
 
- 
+
 
 .destination-two__image {
   position: relative;
@@ -4995,7 +5019,7 @@ h6 {
   margin-bottom: 5px;
 }
 
- 
+
 
 .destination-three__item:hover .destination-three__item__link {
   visibility: visible;
@@ -7525,7 +7549,7 @@ h6 {
 --------------------------------------------------------------*/
 .tours-details {
   position: relative;
-  padding: 120px 0px;
+  padding: 50px 0px;
 
   @media (max-width: 767px) {
     padding: 80px 0px;
@@ -7539,7 +7563,7 @@ h6 {
 
 .tours-details__image img {
   width: 100%;
-  height:40rem;
+  height: 40rem;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -7605,7 +7629,7 @@ h6 {
 
 .tours-details__gallery img {
   width: 100%;
- object-fit: cover;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -8244,13 +8268,13 @@ input[type="number"] {
 .gallery-one__card {
   position: relative;
   overflow: hidden;
-  border-radius:12px;
+  border-radius: 12px;
   margin-bottom: 24px;
 }
 
 .gallery-one__card img {
   transform: scale(1);
- object-fit: cover;
+  object-fit: cover;
   width: 100%;
   transition: transform 500ms ease, opacity 500ms ease;
   opacity: 1;
@@ -9787,7 +9811,7 @@ input[type="number"] {
   font-family: var(--bighorn-heading-font);
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 22px;
   line-height: 156%;
   text-align: center;
   letter-spacing: -1px;
@@ -11990,7 +12014,7 @@ input[type="number"] {
 .main-footer .container {
   position: relative;
   padding-bottom: 0.2rem;
-  
+
 }
 
 .main-footer__bottom {
@@ -12027,7 +12051,7 @@ input[type="number"] {
   background-color: rgba(var(--bighorn-white-rgb), 0.3);
   font-size: 10px;
   /* color: var(--bighorn-white); */
-    color: black;
+  color: black;
   transition: all 500ms ease;
   border-radius: 5px;
   background-color: #fe6f01;
@@ -12039,7 +12063,7 @@ input[type="number"] {
   display: inline-block;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-    color: white;
+  color: white;
 }
 
 .main-footer__social a:hover {
@@ -12409,7 +12433,7 @@ input[type="number"] {
   }
 }
 
- 
+
 
 @media (min-width: 1920px) {
   .main-footer--two::before {
@@ -12721,7 +12745,7 @@ input[type="number"] {
   }
 }
 
-  
+
 
 .faq-section__wrapper .sec-title {
   padding-bottom: 15px;
@@ -14399,16 +14423,17 @@ input[type="number"] {
 }
 
 
- .right {
-  color: #fff; 
+.right {
+  color: #fff;
   font-size: 10px;
   padding: 2px;
   /* padding-top: 5px; */
   background-color: #fe6f01;
   border-radius: 8px;
 }
-.wrong{
-   color: #fff; 
+
+.wrong {
+  color: #fff;
   font-size: 10px;
   padding: 2px;
   /* padding-top: 5px; */

@@ -12,7 +12,7 @@
 	<link rel="manifest" href="assets/images/favicons/site.webmanifest">
 
 	<!-- fonts -->
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -33,8 +33,82 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 	<!-- template styles -->
 	<link rel="stylesheet" href="css/bighorn.css">
+
+
+
+	<style>
+  .booking-form-wrapper {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.08); */
+    animation: fadeInUp 0.5s ease;
+	height:40vw;
+  }
+  .form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 5px;
+  }
+  label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  .qty-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .qty-btn {
+    padding: 6px 12px;
+    background: #eee;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .qty-btn:hover {
+    background: #ff6a00;
+    color: white;
+  }
+  .form-summary {
+    text-align: right;
+    font-weight: bold;
+  }
+  .book-now-btn {
+    background: #ff6a00;
+    border: none;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .book-now-btn:hover {
+    background: #e35a00;
+  }
+  .form-footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+  }
+</style>
+
 
 </head>
 
@@ -42,15 +116,15 @@
 	<!-- Preloader Icon -->
 	<div class="page-wrapper">
 
-		<header class="main-header main-header--two sticky-header sticky-header--normal ">
-			<div class="container-fluid">
-				<div class="main-header__inner">
+		<header class="main-header main-header--two sticky-header sticky-header--normal " >
+			<div class="container-fluid"   >
+				<div class="main-header__inner"  >
 					<div class="main-header__logo">
 						<a href="index.html">
 							<img src="assets/logo.png" alt="Big Horn Logo" width="165">
 						</a>
 					</div>
-					<nav class="main-header__nav main-menu">
+					<nav class="main-header__nav main-menu" >
 						<ul class="main-menu__list">
 							<li>
 								<a href="index.html">Home</a>
@@ -61,7 +135,7 @@
 									<li class="dropdown">
 										<a href="#">Upcoming Treks</a>
 										<ul class="sub-menu">
-										 <li><a href="hampta-pass-trek.html">Hampta Pass Trek</a></li>
+											<li><a href="hampta-pass-trek.html">Hampta Pass Trek</a></li>
 											<li><a href="valley-of-flower.html">Valley Of Flower</a></li>
 											<li><a href="bhirgu-lake-trek.html">bhirgu lake trek</a></li>
 											<li><a href="beas-kund.html">Beas Kund Trek</a></li>
@@ -100,9 +174,54 @@
 			</div>
 		</header>
 
-		<section class="page-header">
-			<div class="page-header__hampta"></div><!-- /.page-header__bg -->
-		</section><!-- /.page-header -->
+		<!-- hero start -->
+		<section class="hero-one"
+			style="background-image: url('images/treks/hampta-pass-trek2.jpg');   width: 100%; height:52vw; background-size: cover; background-position: top; background-repeat: no-repeat;">
+
+ 
+
+			<!-- <div class="booking-form-wrapper">
+
+
+				<h3 class="form-title">Book Your Trek</h3>
+
+				<form class="booking-form">
+					<div class="form-group">
+						<label for="name">Full Name</label>
+						<input type="text" id="name" placeholder="Enter your name" required>
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email Address</label>
+						<input type="email" id="email" placeholder="Enter your email" required>
+					</div>
+
+					<div class="form-group">
+						<label for="date">Select Date</label>
+						<input type="date" id="date" required>
+					</div>
+
+					<div class="form-group">
+						<label for="adults">No. of Adults</label>
+						<input type="number" id="adults" value="1" min="1" required>
+					</div>
+
+					<div class="form-summary">
+						<p>Total Price: <span id="totalPrice">₹9500</span></p>
+					</div>
+
+					<button type="submit" class="book-now-btn">Book Now</button>
+				</form>
+			</div> -->
+
+
+
+		</section>
+
+		<!-- <div class="banner2">
+			<img src="images/treks/hampta-pass-trek2.jpg"   />
+		</div> -->
+
 
 		<section class="tours-details">
 			<div class="container">
@@ -219,10 +338,10 @@
 							</p>
 							<h3 class="tours-details__title mt35">REFUND POLICY:</h3>
 							<p class="tours-details__text">
-								<ul> 
+							<ul>
 								<li>If you opt for a refund after cancellation, the amount will be credited back to the
-								original payment method within <b>10–12 working days.</b></li>
-								 </ul>
+									original payment method within <b>10–12 working days.</b></li>
+							</ul>
 							</p>
 							<!-- <div class="row">
 								<div class="col-xl-4 col-md-6">
@@ -299,7 +418,7 @@
 									<img src="images/treks/humta6.jpg" height="240rem" alt="bighorn">
 								</div>
 							</div>
-							 
+
 						</div>
 						<h3 class="tours-details__title mt35">Itinerary</h3>
 						<p class="tours-details__text">
@@ -454,66 +573,72 @@
 						<!-- /.accordian-item -->
 
 					</div>
-						<div class="col-lg-4 wow fadeInRight" data-wow-delay="200ms">
-					<div class="tours-details__booking">
-							<h3 class="tours-details__booking__title">Booking Form</h3>
-							<form class="contact-form-validated form-one" action="inc/sendemail.php">
-								<ul class="tours-details__booking__list">
-									<li>
-										<h5 class="tours-details__booking__list__left">
-											<span>Price</span>
-											From
-										</h5>
-										&#8377;9500
-									</li>
-									<li>
-										<h5 class="tours-details__booking__list__left">
-											Date
-											<span>16 - Jun - 2024</span>
-										</h5>
-									</li>
-									<li>
-										<h5 class="tours-details__booking__list__left">
-											Adults
-											<span>Over 18 ( &#8377;
- 9500)</span>
-										</h5>
-										<div class="tours-details__booking__list__control">
-											<button class="sub"><i class="fas fa-minus"></i></button>
-											<input id="guests" type="number" value="2" name="guests" placeholder="2">
-											<button class="add"><i class="fas fa-plus"></i></button>
-										</div>
-									</li>
-								</ul>
+					<div class="col-lg-4 wow fadeInRight" data-wow-delay="200ms">
+				<div class="tours-details__booking">
+					<div class="booking-form-wrapper animate">
+						<h3 class="form-title"><i class="fas fa-hiking"></i> Book Your Adventure</h3>
+						<form class="booking-form" id="trekBookingForm">
+							<div class="form-group">
+								<label for="name"><i class="fas fa-user"></i> Full Name</label>
+								<input type="text" id="name" placeholder="Enter your name" required>
+							</div>
 
-								<button type="submit" class="bighorn-btn"><span>Booking Now For 9500</span></button>
-							</form>
-							<div class="result"></div>
-						</div><!-- /.tours-details__booking -->
-					</div><!-- /.col-lg-4 -->
-					<div class="col-lg-8 wow" data-wow-delay="200ms"> 
-					<h3 class="tours-details__title">See Map</h3>
-					<p class="tours-details__text">
-						You’ve switched your charity’s office to renewable energy. You’ve cut most flights. The
-						office fridge is stacked high with
-						oat milk, and lycra-clad staff are proudly showing off their subsidised bicycles. On your
-						way to net-zero.
-					</p>
-					<div class="tours-details__map">
-						<iframe title="template google map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3373.964602583923!2d77.23834687562615!3d32.25903461027707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39047d1098f166cd%3A0xca1e488dee0dc404!2sHampta%20Pass%20Trek!5e0!3m2!1sen!2sin!4v1751099508547!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<div class="form-group">
+								<label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+								<input type="email" id="email" placeholder="Enter your email" required>
+							</div>
+
+							<div class="form-group">
+								<label for="date"><i class="fas fa-calendar-alt"></i> Select Date</label>
+								<input type="date" id="date" required>
+							</div>
+
+							<div class="form-group quantity-group">
+								<label for="adults"><i class="fas fa-users"></i> No. of Adults</label>
+								<div class="qty-box">
+									<button type="button" class="qty-btn" onclick="changeQty(-1)">-</button>
+									<input type="number" id="adults" value="1" min="1" required>
+									<button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
+								</div>
+							</div>
+
+							<div class="form-summary">
+								<p>Total Price: <span id="totalPrice">₹9500</span></p>
+							</div>
+
+							<button type="submit" class="book-now-btn"><i class="fas fa-paper-plane"></i> Book Now</button>
+						</form>
+						<p class="form-footer"><i class="fas fa-lock"></i> 100% secure booking • No hidden charges</p>
 					</div>
+				</div>
+			</div>
+					</div><!-- /.col-lg-4 -->
+					<div class="col-lg-8 wow" data-wow-delay="200ms">
+						<h3 class="tours-details__title">See Map</h3>
+						<p class="tours-details__text">
+							You’ve switched your charity’s office to renewable energy. You’ve cut most flights. The
+							office fridge is stacked high with
+							oat milk, and lycra-clad staff are proudly showing off their subsidised bicycles. On your
+							way to net-zero.
+						</p>
+						<div class="tours-details__map">
+							<iframe title="template google map"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3373.964602583923!2d77.23834687562615!3d32.25903461027707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39047d1098f166cd%3A0xca1e488dee0dc404!2sHampta%20Pass%20Trek!5e0!3m2!1sen!2sin!4v1751099508547!5m2!1sen!2sin"
+								width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
 					</div><!-- /.tours-details__map -->
-					
-					 
-				</div><!-- /.col-lg-8 --> 
+
+
 				</div><!-- /.col-lg-8 -->
-				 
-			</div><!-- /.row -->
+			</div><!-- /.col-lg-8 -->
+
+	</div><!-- /.row -->
 	</div><!-- /.container -->
 	</section><!-- tour-details -->
 
 
- <footer class="main-footer">
+	<footer class="main-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-xl-4 wow fadeInUp " data-wow-delay="00ms">
@@ -565,7 +690,7 @@
 							<li><a href="valley-of-flower.html">Valley of Flower</a></li>
 							<li><a href="beas-kund.html"> Beas Kund</a></li>
 							<li><a href="har-ki-kund.html">Har ki dun</a></li>
-								<li><a href="bhirgu-lake-trek.html">Bhirgu Lake</a></li>
+							<li><a href="bhirgu-lake-trek.html">Bhirgu Lake</a></li>
 						</ul><!-- /.list-unstyled footer-widget__links -->
 					</div><!-- /.footer-widget -->
 				</div><!-- /.col-md-6 -->
@@ -573,15 +698,15 @@
 					<div class="footer-widget footer-widget--gallery">
 						<h2 class="footer-widget__title">Locate Us</h2><!-- /.footer-widget__title -->
 						<div class="footer-widget__gallery">
-							 <div class="uper"  >
-                                <h5 style="font-weight: 400; font-size: 18px ;" > Adress </h5>
-                                <li>Noida uttar Pradesh 201005</li>
-                             </div><!-- /.image-item -->
-                             <div class="lower" >
-                                
-                                 <h5 style="font-weight: 400; font-size: 18px;">Contact</h5>
-                                 <li>8810550515</li>
-                             </div>
+							<div class="uper">
+								<h5 style="font-weight: 400; font-size: 18px ;"> Adress </h5>
+								<li>Noida uttar Pradesh 201005</li>
+							</div><!-- /.image-item -->
+							<div class="lower">
+
+								<h5 style="font-weight: 400; font-size: 18px;">Contact</h5>
+								<li>8810550515</li>
+							</div>
 						</div>
 					</div><!-- /.footer-widget -->
 				</div><!-- /.col-md-6 -->
@@ -659,6 +784,35 @@
 	<script src="js/splittext.min.js"></script>
 	<script src="js/bighorn-split.js"></script>
 	<script src="js/bighorn.js"></script>
+
+	 
+
+<script>
+  const pricePerAdult = 9500;
+  const adultsInput = document.getElementById('adults');
+  const totalPrice = document.getElementById('totalPrice');
+
+  function updatePrice() {
+    const qty = parseInt(adultsInput.value) || 1;
+    totalPrice.textContent = `₹${qty * pricePerAdult}`;
+  }
+
+  function changeQty(change) {
+    let current = parseInt(adultsInput.value);
+    current = isNaN(current) ? 1 : current + change;
+    if (current < 1) current = 1;
+    adultsInput.value = current;
+    updatePrice();
+  }
+
+  adultsInput.addEventListener('input', updatePrice);
+  document.getElementById('trekBookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("🎉 Booking successful!");
+  });
+</script>
+
+
 
 
 </body>

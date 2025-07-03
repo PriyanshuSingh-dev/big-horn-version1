@@ -18,7 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Geologica:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-select.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
@@ -37,6 +37,9 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/bighorn.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         @keyframes fadeInUp {
             from {
@@ -77,75 +80,167 @@
         }
 
         /* new footer  */
-        
-     .footer {
-      background: radial-gradient(circle at top center, #ff6600, #0e0e0e 45%);
-      color: white;
-      padding: 60px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .footer h5 {
-      color: #fff;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-    .footer a {
-      color: #bbb;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      color: #ff5500;
-    }
-    @keyframes bounceIn {
-      0% {
-        opacity: 0;
-        transform: translateY(-200px) rotate(-90deg);
-      }
-      50% {
-        transform: translateY(0) rotate(-90deg);
-      }
-      70% {
-        transform: translateY(-30px) rotate(-90deg);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) rotate(-90deg);
-      }
-    }
-    .footer .brand-text {
-      font-size: 48px;
-      font-weight: 700;
-      background: linear-gradient(to top, #ff5500, #cccccc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transform: rotate(-90deg);
-      display: inline-block;
-      animation: bounceIn 1.9s ease-in-out 1;
-    }
-    .book-btn {
-      color: #ff5500;
-      font-weight: bold;
-    }
-    .book-btn:hover {
-      text-decoration: underline;
-    }
-    .social-icons a {
-      color: white;
-      margin-right: 15px;
-      font-size: 18px;
-    }
-    .copyright {
-      color: #888;
-      font-size: 14px;
-      margin-top: 30px;
-      text-align: center;
-    }
+
+        .footer {
+            background: radial-gradient(circle at top center, #ff6600, #0e0e0e 45%);
+            color: white;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer h5 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer a {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #ff5500;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-200px) rotate(-90deg);
+            }
+
+            50% {
+                transform: translateY(0) rotate(-90deg);
+            }
+
+            70% {
+                transform: translateY(-30px) rotate(-90deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(-90deg);
+            }
+        }
+
+        .footer .brand-text {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(to top, #ff5500, #cccccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform: rotate(-90deg);
+            display: inline-block;
+            animation: bounceIn 1.9s ease-in-out 1;
+        }
+
+        .book-btn {
+            color: #ff5500;
+            font-weight: bold;
+        }
+
+        .book-btn:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .copyright {
+            color: #888;
+            font-size: 14px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
         /* new footer  */
+
+
+
+
+        /* for clickable gallery  */
+
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 15, 15, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .lightbox-overlay img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .lightbox-title {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .lightbox-download {
+            background: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .lightbox-close {
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* for clickable gallery  */
+
+
+
+        /* reel section */
+     
+  .motion-slider-section {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+
+  .motion-heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #222;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+
+
+        /* reel section */
     </style>
 
     <!-- new footer  -->
-     
+
     <!-- new footer  -->
 
 </head>
@@ -240,7 +335,8 @@
             <div class="container">
                 <div class="sec-title text-center">
                     <h3 class="sec-title__title bw-split-in-left">Upcoming Treks</h3>
-                    <p class="sec-title__text bw-split-in-up-fast">Experience the thrill of upcoming treks—discover new trails, stunning views <br> and unforgettable adventures with us.
+                    <p class="sec-title__text bw-split-in-up-fast">Experience the thrill of upcoming treks—discover new
+                        trails, stunning views <br> and unforgettable adventures with us.
                     </p>
                 </div>
                 <div class="tours-one__carousel bighorn-owl__carousel bighorn-owl__carousel--basic-nav owl-carousel"
@@ -259,110 +355,109 @@
              }'>
                     <!-- Place your .item blocks here -->
                     <div class="item">
-                        <div class="tours-one__item">
-                            <img src="images/treks/humta1.jpg" alt="bighorn">
-                            <div class="tours-one__item__offer">40% off</div>
-                            <div class="tours-one__item__content">
-                                <div class="tours-one__item__feature">Featured</div>
-                                <div class="tours-one__item__price">₹9500/-</div>
-                                <h3 class="tours-one__item__title"><a href="hampta-pass-trek.html">Hampta Pass</a>
-                                </h3>
-                                <ul class="tours-one__item__meta list-unstyled">
-                                    <li><span>5.0</span>245 Rating</li>
-                                    <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
-                                </ul>
+                        <a href="hampta-pass-trek.html" style="text-decoration: none; color: inherit;">
+                            <div class="tours-one__item">
+                                <img src="images/treks/humta1.jpg" alt="bighorn">
+                                <div class="tours-one__item__offer">40% off</div>
+                                <div class="tours-one__item__content">
+                                    <div class="tours-one__item__feature">Featured</div>
+                                    <div class="tours-one__item__price">₹9500/-</div>
+                                    <h3 class="tours-one__item__title">Hampta Pass</h3>
+                                    <ul class="tours-one__item__meta list-unstyled">
+                                        <li><span>5.0</span>245 Rating</li>
+                                        <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
+                                    </ul>
+                                </div>
                             </div>
-
-                        </div>
+                        </a>
                     </div>
-                    <!-- Add more .item blocks as needed -->
+
+                    <div class="item">
+                        <a href="valley-of-flower.html" style="text-decoration: none; color: inherit;">
+                            <div class="tours-one__item">
+                                <img src="images/treks/flower2.jpg" alt="bighorn">
+                                <div class="tours-one__item__offer">40% off</div>
+                                <div class="tours-one__item__content">
+                                    <div class="tours-one__item__feature">Featured</div>
+                                    <div class="tours-one__item__price">10,999/-</div>
+                                    <h3 class="tours-one__item__title">Valley Of Flower</h3>
+                                    <ul class="tours-one__item__meta list-unstyled">
+                                        <li><span>5.0</span>245 Rating</li>
+                                        <li><i class="flaticon-pin-1"></i>Uttarakhand, India</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="item">
+                        <a href="bhirgu-lake-trek.html" style="text-decoration: none; color: inherit;">
+                            <div class="tours-one__item">
+                                <img src="images/treks/lake2.jpg" alt="bighorn">
+                                <div class="tours-one__item__offer">40% off</div>
+                                <div class="tours-one__item__content">
+                                    <div class="tours-one__item__feature">Featured</div>
+                                    <div class="tours-one__item__price">10,999/-</div>
+                                    <h3 class="tours-one__item__title">Bhirgu Lake Trek</h3>
+                                    <ul class="tours-one__item__meta list-unstyled">
+                                        <li><span>5.0</span>245 Rating</li>
+                                        <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="item">
+                        <a href="beas-kund.html" style="text-decoration: none; color: inherit;">
+                            <div class="tours-one__item">
+                                <img src="images/treks/lake1.jpg" alt="bighorn">
+                                <div class="tours-one__item__offer">40% off</div>
+                                <div class="tours-one__item__content">
+                                    <div class="tours-one__item__feature">Featured</div>
+                                    <div class="tours-one__item__price">7,950/-</div>
+                                    <h3 class="tours-one__item__title">Beas Kund</h3>
+                                    <ul class="tours-one__item__meta list-unstyled">
+                                        <li><span>5.0</span>245 Rating</li>
+                                        <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="item">
+                        <a href="har-ki-kund.html" style="text-decoration: none; color: inherit;">
+                            <div class="tours-one__item">
+                                <img src="images/treks/lake2.jpg" alt="bighorn">
+                                <div class="tours-one__item__offer">40% off</div>
+                                <div class="tours-one__item__content">
+                                    <div class="tours-one__item__feature">Featured</div>
+                                    <div class="tours-one__item__price">9,000/-</div>
+                                    <h3 class="tours-one__item__title">Har ki Dun</h3>
+                                    <ul class="tours-one__item__meta list-unstyled">
+                                        <li><span>5.0</span>245 Rating</li>
+                                        <li><i class="flaticon-pin-1"></i>Uttarakhand, India</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                     <!-- Place your .item blocks here -->
-                    <div class="item">
-                        <div class="tours-one__item">
-                            <img src="images/treks/flower2.jpg" alt="bighorn">
-                            <div class="tours-one__item__offer">40% off</div>
 
-                            <div class="tours-one__item__content">
-                                <div class="tours-one__item__feature">Featured</div>
-                                <div class="tours-one__item__price">10,999/-</div>
-                                <h3 class="tours-one__item__title"><a href="valley-of-flower.html">Valley Of Flower</a>
-                                </h3>
-                                <ul class="tours-one__item__meta list-unstyled">
-                                    <li><span>5.0</span>245 Rating</li>
-                                    <li><i class="flaticon-pin-1"></i>Uttarakhand, India</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div> <!-- Place your .item blocks here -->
-                    <div class="item">
-                        <div class="tours-one__item">
-                            <img src="images/treks/lake2.jpg" alt="bighorn">
-                            <div class="tours-one__item__offer">40% off</div>
-
-                            <div class="tours-one__item__content">
-                                <div class="tours-one__item__feature">Featured</div>
-                                <div class="tours-one__item__price">10,999/-</div>
-                                <h3 class="tours-one__item__title"><a href="bhirgu-lake-trek.html">bhirgu lake trek</a>
-                                </h3>
-                                <ul class="tours-one__item__meta list-unstyled">
-                                    <li><span>5.0</span>245 Rating</li>
-                                    <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tours-one__item">
-                            <img src="images/treks/lake1.jpg" alt="bighorn">
-                            <div class="tours-one__item__offer">40% off</div>
-                            <div class="tours-one__item__content">
-                                <div class="tours-one__item__feature">Featured</div>
-                                <div class="tours-one__item__price"> 7,950/-</div>
-                                <h3 class="tours-one__item__title"><a href="beas-kund.html">Beas Kund</a>
-                                </h3>
-                                <ul class="tours-one__item__meta list-unstyled">
-                                    <li><span>5.0</span>245 Rating</li>
-                                    <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- Add more .item blocks as needed -->
-                    <!-- Place your .item blocks here -->
-                    <div class="item">
-                        <div class="tours-one__item">
-                            <img src="images/treks/lake2.jpg" alt="bighorn">
-                            <div class="tours-one__item__offer">40% off</div>
-
-                            <div class="tours-one__item__content">
-                                <div class="tours-one__item__feature">Featured</div>
-                                <div class="tours-one__item__price"> 9,000/-</div>
-                                <h3 class="tours-one__item__title"><a href="har-ki-kund.html">Har ki Dun</a>
-                                </h3>
-                                <ul class="tours-one__item__meta list-unstyled">
-                                    <li><span>5.0</span>245 Rating</li>
-                                    <li><i class="flaticon-pin-1"></i>Uttarakhand,India</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div> <!-- Place your .item blocks here -->
-                 
                 </div>
             </div>
         </section>
         <!-- courosel end -->
-       
-        
+
+
         <!-- explore by destination -->
-          <section class="tours-one" style="background-color: #f4e7e1;">
-            <div class="container"  >
+        <section class="tours-one" style="background-color: #f4e7e1;">
+            <div class="container">
                 <div class="sec-title text-left">
                     <h3 class="sec-title__title bw-split-in-left">Explore Wonderfull Treks</h3>
-                    <p class="sec-title__text bw-split-in-up-fast">Ready to explore? Discover amazing treks, meet new friends <br> and make memories that last a lifetime!
+                    <p class="sec-title__text bw-split-in-up-fast">Ready to explore? Discover amazing treks, meet new
+                        friends <br> and make memories that last a lifetime!
                     </p>
                 </div>
                 <div class="tours-one__carousel bighorn-owl__carousel bighorn-owl__carousel--basic-nav owl-carousel"
@@ -379,100 +474,97 @@
                      "1200": { "items": 3 }
                  }
              }'>
-                    <!-- Place your .item blocks here -->
                     <div class="item">
-                        <div class="tours-one__item">
-                            <img src="images/treks/humta1.jpg" alt="bighorn">
-                            <div class="tours-one__item__offer">40% off</div>
-                            <div class="tours-one__item__content">
-                                <div class="tours-one__item__feature">Featured</div>
-                                <div class="tours-one__item__price">₹9500/-</div>
-                                <h3 class="tours-one__item__title"><a href="hampta-pass-trek.html">Hampta Pass</a>
-                                </h3>
-                                <ul class="tours-one__item__meta list-unstyled">
-                                    <li><span>5.0</span>245 Rating</li>
-                                    <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
-                                </ul>
+                        <a href="hampta-pass-trek.html" style="text-decoration: none; color: inherit;">
+                            <div class="tours-one__item">
+                                <img src="images/treks/humta1.jpg" alt="bighorn">
+                                <div class="tours-one__item__offer">40% off</div>
+                                <div class="tours-one__item__content">
+                                    <div class="tours-one__item__feature">Featured</div>
+                                    <div class="tours-one__item__price">₹9500/-</div>
+                                    <h3 class="tours-one__item__title">Hampta Pass</h3>
+                                    <ul class="tours-one__item__meta list-unstyled">
+                                        <li><span>5.0</span>245 Rating</li>
+                                        <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
+                                    </ul>
+                                </div>
                             </div>
-
-                        </div>
+                        </a>
                     </div>
-                    <!-- Add more .item blocks as needed -->
-                    <!-- Place your .item blocks here -->
+
                     <div class="item">
-                        <div class="tours-one__item">
-                            <img src="images/treks/flower2.jpg" alt="bighorn">
-                            <div class="tours-one__item__offer">40% off</div>
-
-                            <div class="tours-one__item__content">
-                                <div class="tours-one__item__feature">Featured</div>
-                                <div class="tours-one__item__price">10,999/-</div>
-                                <h3 class="tours-one__item__title"><a href="valley-of-flower.html">Valley Of Flower</a>
-                                </h3>
-                                <ul class="tours-one__item__meta list-unstyled">
-                                    <li><span>5.0</span>245 Rating</li>
-                                    <li><i class="flaticon-pin-1"></i>Uttarakhand, India</li>
-                                </ul>
+                        <a href="valley-of-flower.html" style="text-decoration: none; color: inherit;">
+                            <div class="tours-one__item">
+                                <img src="images/treks/flower2.jpg" alt="bighorn">
+                                <div class="tours-one__item__offer">40% off</div>
+                                <div class="tours-one__item__content">
+                                    <div class="tours-one__item__feature">Featured</div>
+                                    <div class="tours-one__item__price">10,999/-</div>
+                                    <h3 class="tours-one__item__title">Valley Of Flower</h3>
+                                    <ul class="tours-one__item__meta list-unstyled">
+                                        <li><span>5.0</span>245 Rating</li>
+                                        <li><i class="flaticon-pin-1"></i>Uttarakhand, India</li>
+                                    </ul>
+                                </div>
                             </div>
-
-                        </div>
-                    </div> <!-- Place your .item blocks here -->
-                    <div class="item">
-                        <div class="tours-one__item">
-                            <img src="images/treks/lake2.jpg" alt="bighorn">
-                            <div class="tours-one__item__offer">40% off</div>
-
-                            <div class="tours-one__item__content">
-                                <div class="tours-one__item__feature">Featured</div>
-                                <div class="tours-one__item__price">10,999/-</div>
-                                <h3 class="tours-one__item__title"><a href="bhirgu-lake-trek.html">bhirgu lake trek</a>
-                                </h3>
-                                <ul class="tours-one__item__meta list-unstyled">
-                                    <li><span>5.0</span>245 Rating</li>
-                                    <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
-                                </ul>
-                            </div>
-
-                        </div>
+                        </a>
                     </div>
-                    <div class="item">
-                        <div class="tours-one__item">
-                            <img src="images/treks/lake1.jpg" alt="bighorn">
-                            <div class="tours-one__item__offer">40% off</div>
-                            <div class="tours-one__item__content">
-                                <div class="tours-one__item__feature">Featured</div>
-                                <div class="tours-one__item__price"> 7,950/-</div>
-                                <h3 class="tours-one__item__title"><a href="beas-kund.html">Beas Kund</a>
-                                </h3>
-                                <ul class="tours-one__item__meta list-unstyled">
-                                    <li><span>5.0</span>245 Rating</li>
-                                    <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
-                                </ul>
-                            </div>
 
-                        </div>
+                    <div class="item">
+                        <a href="bhirgu-lake-trek.html" style="text-decoration: none; color: inherit;">
+                            <div class="tours-one__item">
+                                <img src="images/treks/lake2.jpg" alt="bighorn">
+                                <div class="tours-one__item__offer">40% off</div>
+                                <div class="tours-one__item__content">
+                                    <div class="tours-one__item__feature">Featured</div>
+                                    <div class="tours-one__item__price">10,999/-</div>
+                                    <h3 class="tours-one__item__title">Bhirgu Lake Trek</h3>
+                                    <ul class="tours-one__item__meta list-unstyled">
+                                        <li><span>5.0</span>245 Rating</li>
+                                        <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <!-- Add more .item blocks as needed -->
-                    <!-- Place your .item blocks here -->
+
                     <div class="item">
-                        <div class="tours-one__item">
-                            <img src="images/treks/lake2.jpg" alt="bighorn">
-                            <div class="tours-one__item__offer">40% off</div>
-
-                            <div class="tours-one__item__content">
-                                <div class="tours-one__item__feature">Featured</div>
-                                <div class="tours-one__item__price"> 9,000/-</div>
-                                <h3 class="tours-one__item__title"><a href="har-ki-kund.html">Har ki Dun</a>
-                                </h3>
-                                <ul class="tours-one__item__meta list-unstyled">
-                                    <li><span>5.0</span>245 Rating</li>
-                                    <li><i class="flaticon-pin-1"></i>Uttarakhand,India</li>
-                                </ul>
+                        <a href="beas-kund.html" style="text-decoration: none; color: inherit;">
+                            <div class="tours-one__item">
+                                <img src="images/treks/lake1.jpg" alt="bighorn">
+                                <div class="tours-one__item__offer">40% off</div>
+                                <div class="tours-one__item__content">
+                                    <div class="tours-one__item__feature">Featured</div>
+                                    <div class="tours-one__item__price">7,950/-</div>
+                                    <h3 class="tours-one__item__title">Beas Kund</h3>
+                                    <ul class="tours-one__item__meta list-unstyled">
+                                        <li><span>5.0</span>245 Rating</li>
+                                        <li><i class="flaticon-pin-1"></i>Himachal Pradesh, India</li>
+                                    </ul>
+                                </div>
                             </div>
+                        </a>
+                    </div>
 
-                        </div>
-                    </div> <!-- Place your .item blocks here -->
-                 
+                    <div class="item">
+                        <a href="har-ki-kund.html" style="text-decoration: none; color: inherit;">
+                            <div class="tours-one__item">
+                                <img src="images/treks/lake2.jpg" alt="bighorn">
+                                <div class="tours-one__item__offer">40% off</div>
+                                <div class="tours-one__item__content">
+                                    <div class="tours-one__item__feature">Featured</div>
+                                    <div class="tours-one__item__price">9,000/-</div>
+                                    <h3 class="tours-one__item__title">Har ki Dun</h3>
+                                    <ul class="tours-one__item__meta list-unstyled">
+                                        <li><span>5.0</span>245 Rating</li>
+                                        <li><i class="flaticon-pin-1"></i>Uttarakhand, India</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
                 </div>
             </div>
         </section>
@@ -484,104 +576,177 @@
                 <div class="sec-title text-center">
                     <h3 class="sec-title__title bw-split-in-left">Our Beautiful Moment</h3>
                     <p class="sec-title__text bw-split-in-up-fast">
-                       Celebrate our beautiful moments—joyful journeys, shared smiles <br> and unforgettable memories from every adventure!
+                        Celebrate our beautiful moments—joyful journeys, shared smiles <br>
+                        and unforgettable memories from every adventure!
                     </p>
                 </div>
                 <div class="gallery-two__carousel bighorn-owl__carousel owl-carousel" data-owl-options='{
-                    "items": 5,
-                    "margin": 20,
-                    "smartSpeed": 200,
-                    "loop": true,
-                    "autoplay": true,
-                    "center": true,
-                    "nav": false,
-                    "dots": false,
-                    "responsive": {
-                    "0": { "items": 1 },
-                    "500": { "items": 2 },
-                    "768": { "items": 3 },
-                    "992": { "items": 4 },
-                    "1200": { "items": 5 },
-                    "1400": { "items": 5 }
-                    }
-                }'>
+      "items": 5,
+      "margin": 20,
+      "smartSpeed": 200,
+      "loop": true,
+      "autoplay": true,
+      "center": true,
+      "nav": false,
+      "dots": false,
+      "responsive": {
+        "0": { "items": 1 },
+        "500": { "items": 2 },
+        "768": { "items": 3 },
+        "992": { "items": 4 },
+        "1200": { "items": 5 },
+        "1400": { "items": 5 }
+      }
+    }'>
                     <div class="gallery-two__item">
                         <div class="gallery-two__image">
-                            <img src="images/treks/humta5.jpg" height="300rem" alt="image" />
+                            <a href="images/treks/humta5.jpg" class="gallery-link" data-title="humta5.jpg">
+                                <img src="images/treks/humta5.jpg" height="300rem" alt="humta5.jpg" />
+                            </a>
                         </div>
-                        
                     </div>
-                    <div class="gallery-two__item">
-                        <div class="gallery-two__image">
-                            <img src="images/treks/flower6.jpg" height="300rem" alt="image" />
-                        </div>
 
-                    </div>
                     <div class="gallery-two__item">
                         <div class="gallery-two__image">
-                            <img src="images/treks/lake5.jpg" height="300rem" alt="image" />
+                            <a href="images/treks/flower6.jpg" class="gallery-link" data-title="flower6.jpg">
+                                <img src="images/treks/flower6.jpg" height="300rem" alt="flower6.jpg" />
+                            </a>
                         </div>
+                    </div>
 
-                    </div>
                     <div class="gallery-two__item">
                         <div class="gallery-two__image">
-                            <img src="images/treks/lake6.jpg" height="300rem" alt="image" />
+                            <a href="images/treks/lake5.jpg" class="gallery-link" data-title="lake5.jpg">
+                                <img src="images/treks/lake5.jpg" height="300rem" alt="lake5.jpg" />
+                            </a>
                         </div>
-                       
                     </div>
+
                     <div class="gallery-two__item">
                         <div class="gallery-two__image">
-                            <img src="images/treks/flower6.jpg" height="300rem" alt="image" />
+                            <a href="images/treks/lake6.jpg" class="gallery-link" data-title="lake6.jpg">
+                                <img src="images/treks/lake6.jpg" height="300rem" alt="lake6.jpg" />
+                            </a>
                         </div>
-                      
+                    </div>
+
+                    <div class="gallery-two__item">
+                        <div class="gallery-two__image">
+                            <a href="images/treks/flower6.jpg" class="gallery-link" data-title="flower6.jpg">
+                                <img src="images/treks/flower6.jpg" height="300rem" alt="flower6.jpg" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- end -->
 
         <section class="why-choose-one why-choose-one--about">
-			<div class="container">
-				<div class="row d-flex align-items-center">
-					<div class="col-xl-6 wow fadeInUp" data-wow-delay="300ms">
-						<div class="why-choose-one__image">
-							<img src="images/why-choose-one-1.jpg" alt="bighorn">
-						</div>
-					</div>
-					<div class="col-xl-6 wow fadeInRight" data-wow-delay="200ms">
-						<div class="why-choose-one__content">
-							<div class="sec-title">
-								<h3 class="sec-title__title bw-split-in-left">Why Choose Us</h3>
-								<p class="sec-title__text bw-split-in-up-fast">
-									When exploring your options, finding a service that  <br>truly understands your journey matters.
-								</p>
-							</div>
-							<div class="why-choose-one__box">
-								<div class="why-choose-one__box__icon"><i class="flaticon-suitcase"></i></div>
-								<h5 class="why-choose-one__box__title">Customized Adventures</h5>
-								<p class="why-choose-one__box__text">We design each trip keeping your interests in mind, <br>making every experience unique and memorable.</p>
-							</div><!-- why-choose-one__box -->
-							<div class="why-choose-one__box">
-								<div class="why-choose-one__box__icon"><i class="flaticon-signpost"></i></div>
-								<h5 class="why-choose-one__box__title">Reliable Travel Experts</h5>
-								<p class="why-choose-one__box__text">Our team ensures your journey is smooth, safe,<br> and guided by professionals you can trust.</p>
-							</div><!-- why-choose-one__box -->
-							<div class="why-choose-one__btn">
-								<a href="contact.html" class="bighorn-btn">
-									<span>Start Your Journey</span>
-								</a>
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="why-choose-one__image">
+                            <img src="images/why-choose-one-1.jpg" alt="bighorn">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="200ms">
+                        <div class="why-choose-one__content">
+                            <div class="sec-title">
+                                <h3 class="sec-title__title bw-split-in-left">Why Choose Us</h3>
+                                <p class="sec-title__text bw-split-in-up-fast">
+                                    When exploring your options, finding a service that <br>truly understands your
+                                    journey matters.
+                                </p>
+                            </div>
+                            <div class="why-choose-one__box">
+                                <div class="why-choose-one__box__icon"><i class="flaticon-suitcase"></i></div>
+                                <h5 class="why-choose-one__box__title">Customized Adventures</h5>
+                                <p class="why-choose-one__box__text">We design each trip keeping your interests in mind,
+                                    <br>making every experience unique and memorable.
+                                </p>
+                            </div><!-- why-choose-one__box -->
+                            <div class="why-choose-one__box">
+                                <div class="why-choose-one__box__icon"><i class="flaticon-signpost"></i></div>
+                                <h5 class="why-choose-one__box__title">Reliable Travel Experts</h5>
+                                <p class="why-choose-one__box__text">Our team ensures your journey is smooth, safe,<br>
+                                    and guided by professionals you can trust.</p>
+                            </div><!-- why-choose-one__box -->
+                            <div class="why-choose-one__btn">
+                                <a href="contact.html" class="bighorn-btn">
+                                    <span>Start Your Journey</span>
+                                </a>
 
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!-- why-choose-one -->   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- why-choose-one -->
+
+
+
+        <!-- reel section -->
+        <!-- A MOMENT IN MOTION SECTION START -->
+        <section class="motion-slider-section">
+            <h2 class="motion-heading">A Moment in Motion</h2>
+
+            <!-- Swiper Container Start -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DKT8UYgTUqb/"
+                            data-instgrm-version="14" style="max-width: 100%; margin: auto;"></blockquote>
+                    </div>
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DKT8UYgTUqb/"
+                            data-instgrm-version="14" style="max-width: 100%; margin: auto;"></blockquote>
+                    </div>
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DKT8UYgTUqb/"
+                            data-instgrm-version="14" style="max-width: 100%; margin: auto;"></blockquote>
+                    </div>
+
+                    <!-- Slide 2 (replace with your 2nd reel link) -->
+                    <div class="swiper-slide">
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/REEL_LINK_2/"
+                            data-instgrm-version="14" style="max-width: 100%; margin: auto;"></blockquote>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/REEL_LINK_3/"
+                            data-instgrm-version="14" style="max-width: 100%; margin: auto;"></blockquote>
+                    </div>
+
+                    <!-- Add more slides if needed -->
+
+                </div>
+            </div>
+            <!-- Swiper Container End -->
+
+            <!-- Instagram Embed Script -->
+            <script async src="//www.instagram.com/embed.js"></script>
+        </section>
+
+        <!-- reel section -->
+
         <!-- testimonials start -->
         <section class="testimonials-two mt-5">
             <div class="sec-title text-center">
                 <h3 class="sec-title__title ">People Talk About Us</h3>
-                <p class="sec-title__text">People love sharing their journeys—amazing views, warm memories <br>s and stories that bring each adventure to life.</p>
+                <p class="sec-title__text">People love sharing their journeys—amazing views, warm memories <br>s and
+                    stories that bring each adventure to life.</p>
             </div>
             <div class="container">
 
@@ -603,15 +768,20 @@
                                 <div class="testimonials-two__icon">
                                     <i class="flaticon-left-quote"></i>
                                 </div><!-- /.testimonials-two__icon -->
-                                <p class="testimonials-two__text">Travehub work helped us save a significant percentage
-                                    of our tour plan we are happy with all experiences & all services. we want to go
-                                    with you next time. so we are happy with trouhub</p>
+                                <p class="testimonials-two__text">Brahmatal was my first trek ever, and I went from “Can
+                                    I do this?” to “I never want to come down”, all thanks to Bighorn! They didn’t just
+                                    guide us, they vibed with us. Somewhere between sore legs, tough terrains, and
+                                    mid-oxygen crises, I found the most dramatic new friends, loud laughter, epic
+                                    stargazing, breathtaking mountain views, and the world’s most competitive UNO games
+                                    right at the top of the mountain. Bighorn isn’t just about treks, it’s about stories
+                                    you’ll keep telling. You’ll laugh, you’ll climb, you’ll maybe cry a little but
+                                    you’ll love every second.</p>
                                 <!-- /.testimonials-two__text -->
                                 <div class="testimonials-two__author">
-                                    <h5 class="testimonials-two__author__name">Tomas Widdin</h5>
+                                    <h5 class="testimonials-two__author__name">Deeksha Prakash</h5>
                                     <!-- /.testimonials-two__author__name -->
-                                    <span
-                                        class="testimonials-two__author__dec">Developer</span><!-- /.testimonials-two__author_dec -->
+                                    <span class="testimonials-two__author__dec">Energy Policy Advisor at
+                                        BRICS YEA and UNECE</span><!-- /.testimonials-two__author_dec -->
                                 </div><!-- /.testimonials-two__author -->
                             </div><!-- /.testimonials-two__item -->
                         </div><!-- /.item -->
@@ -620,15 +790,18 @@
                                 <div class="testimonials-two__icon">
                                     <i class="flaticon-left-quote"></i>
                                 </div><!-- /.testimonials-two__icon -->
-                                <p class="testimonials-two__text">Travehub work helped us save a significant percentage
-                                    of our tour plan we are happy with all experiences & all services. we want to go
-                                    with you next time. so we are happy with trouhub</p>
+                                <p class="testimonials-two__text">"The cleanups and plogging activities organized during
+                                    the trek were hectic but fun. It was amazing to see everyone come together to keep
+                                    the trails clean. The slogans, that I still remember helped spread the message of
+                                    environmental conservation to other trekkers. I can’t wait to go again. It was my
+                                    first trek experience, and
+                                    TOE made it super cool."</p>
                                 <!-- /.testimonials-two__text -->
                                 <div class="testimonials-two__author">
-                                    <h5 class="testimonials-two__author__name">Tomas Widdin</h5>
+                                    <h5 class="testimonials-two__author__name">Sunny Singh</h5>
                                     <!-- /.testimonials-two__author__name -->
                                     <span
-                                        class="testimonials-two__author__dec">Developer</span><!-- /.testimonials-two__author_dec -->
+                                        class="testimonials-two__author__dec">Delhi</span><!-- /.testimonials-two__author_dec -->
                                 </div><!-- /.testimonials-two__author -->
                             </div><!-- /.testimonials-two__item -->
                         </div><!-- /.item -->
@@ -637,15 +810,34 @@
                                 <div class="testimonials-two__icon">
                                     <i class="flaticon-left-quote"></i>
                                 </div><!-- /.testimonials-two__icon -->
-                                <p class="testimonials-two__text">Travehub work helped us save a significant percentage
-                                    of our tour plan we are happy with all experiences & all services. we want to go
-                                    with you next time. so we are happy with trouhub</p>
+                                <p class="testimonials-two__text">"Seeing the impact of our actions firsthand was
+                                    incredibly rewarding. During the treks, we collected litter, avoided plastic, and
+                                    used sustainable materials, which made a visible difference in the areas and my
+                                    mind. The trip made me a more conscious traveler. I now continue these practices and
+                                    spread awareness about the importance of sustainability."</p>
                                 <!-- /.testimonials-two__text -->
                                 <div class="testimonials-two__author">
-                                    <h5 class="testimonials-two__author__name">Tomas Widdin</h5>
+                                    <h5 class="testimonials-two__author__name">Amit Sharma</h5>
+                                    <!-- /.testimonials-two__author__name -->
+                                    <span class="testimonials-two__author__dec">Lucknow
+                                    </span><!-- /.testimonials-two__author_dec -->
+                                </div><!-- /.testimonials-two__author -->
+                            </div><!-- /.testimonials-two__item -->
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <div class="testimonials-two__item">
+                                <div class="testimonials-two__icon">
+                                    <i class="flaticon-left-quote"></i>
+                                </div><!-- /.testimonials-two__icon -->
+                                <p class="testimonials-two__text">"I loved the night sky discussions and the sense of
+                                    community. I saw some satellites and the ISS moving. What an experience. TAP made me
+                                    realize how small actions can make a big difference in preserving nature."</p>
+                                <!-- /.testimonials-two__text -->
+                                <div class="testimonials-two__author">
+                                    <h5 class="testimonials-two__author__name">Tanya </h5>
                                     <!-- /.testimonials-two__author__name -->
                                     <span
-                                        class="testimonials-two__author__dec">Developer</span><!-- /.testimonials-two__author_dec -->
+                                        class="testimonials-two__author__dec">Indore</span><!-- /.testimonials-two__author_dec -->
                                 </div><!-- /.testimonials-two__author -->
                             </div><!-- /.testimonials-two__item -->
                         </div><!-- /.item -->
@@ -655,84 +847,121 @@
             </div><!-- /.container -->
         </section><!-- /.testimonials-two -->
         <!-- gallery two start -->
+
+        <!-- iopen image on fullscreen -->
+        <div class="lightbox-overlay" id="lightbox">
+            <div class="lightbox-title" id="lightboxTitle"></div>
+            <img id="lightboxImage" src="" alt="">
+            <a id="lightboxDownload" class="lightbox-download" href="" download>Download</a>
+            <div class="lightbox-close" onclick="closeLightbox()">✖ Close</div>
+        </div>
+
+        <!-- iopen image on fullscreen -->
+
+
         <section class="gallery-one">
             <div class="container">
                 <div class="sec-title text-center">
-
                     <h3 class="sec-title__title bw-split-in-left">Recent Gallery</h3>
                     <p class="sec-title__text bw-split-in-up-fast">
-                    Discover stunning snapshots from our recent adventures—real  <br>moments, real smiles, and pure wanderlust. 
+                        content of a page when looking at layout the point<br> of using lorem the is Ipsum less
                     </p>
                 </div>
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="gallery-one__card">
-                            <img src="images/treks/humta1.jpg" height="400rem"  alt="bighorn">
-                        </div><!-- /.gallery-one__card -->
-                    </div><!-- /.col-lg-3 -->
+                            <a href="images/treks/humta1.jpg" data-title="humta1.jpg" class="gallery-link">
+                                <img src="images/treks/humta1.jpg" height="400rem" alt="humta1.jpg">
+                            </a>
+                        </div>
+                    </div>
+
                     <div class="col-lg-2">
                         <div class="gallery-one__card">
-                            <img src="images/treks/flower3.jpg" height="185rem" alt="bighorn">
-
-                        </div><!-- /.gallery-one__card -->
+                            <a href="images/treks/flower3.jpg" data-title="flower3.jpg" class="gallery-link">
+                                <img src="images/treks/flower3.jpg" height="185rem" alt="flower3.jpg">
+                            </a>
+                        </div>
                         <div class="gallery-one__card">
-                            <img src="images/treks/beas-kund.jpeg" height="189rem" alt="bighorn">
+                            <a href="images/treks/beas-kund.jpeg" data-title="beas-kund.jpeg" class="gallery-link">
+                                <img src="images/treks/beas-kund.jpeg" height="189rem" alt="beas-kund.jpeg">
+                            </a>
+                        </div>
+                    </div>
 
-                        </div><!-- /.gallery-one__card -->
-                    </div><!-- /.col-lg-2 -->
                     <div class="col-lg-3">
                         <div class="gallery-one__card">
-                            <img src="images/treks/lake5.jpg" height="400rem" alt="bighorn">
+                            <a href="images/treks/lake5.jpg" data-title="lake5.jpg" class="gallery-link">
+                                <img src="images/treks/lake5.jpg" height="400rem" alt="lake5.jpg">
+                            </a>
+                        </div>
+                    </div>
 
-                        </div><!-- /.gallery-one__card -->
-                    </div><!-- /.col-lg-3 -->
                     <div class="col-lg-2">
                         <div class="gallery-one__card">
-                            <img src="images/treks/lake3.jpg" height="185rem" alt="bighorn">
-
-                        </div><!-- /.gallery-one__card -->
+                            <a href="images/treks/lake3.jpg" data-title="lake3.jpg" class="gallery-link">
+                                <img src="images/treks/lake3.jpg" height="185rem" alt="lake3.jpg">
+                            </a>
+                        </div>
                         <div class="gallery-one__card">
-                            <img src="images/treks/har-ki-kund.jpeg" height="189rem" alt="bighorn">
+                            <a href="images/treks/har-ki-kund.jpeg" data-title="har-ki-kund.jpeg" class="gallery-link">
+                                <img src="images/treks/har-ki-kund.jpeg" height="189rem" alt="har-ki-kund.jpeg">
+                            </a>
+                        </div>
+                    </div>
 
-                        </div><!-- /.gallery-one__card -->
-                    </div><!-- /.col-lg-2 -->
                     <div class="col-lg-3">
                         <div class="gallery-one__card">
-                            <img src="images/treks/flower5.jpg" height="400rem" alt="bighorn">
+                            <a href="images/treks/flower5.jpg" data-title="flower5.jpg" class="gallery-link">
+                                <img src="images/treks/flower5.jpg" height="400rem" alt="flower5.jpg">
+                            </a>
+                        </div>
+                    </div>
 
-                        </div><!-- /.gallery-one__card -->
-                    </div><!-- /.col-lg-3 -->
                     <div class="col-lg-3">
                         <div class="gallery-one__card">
-                            <img src="images/treks/humta2.jpg" height="185rem" alt="bighorn">
-
-                        </div><!-- /.gallery-one__card -->
+                            <a href="images/treks/humta2.jpg" data-title="humta2.jpg" class="gallery-link">
+                                <img src="images/treks/humta2.jpg" height="185rem" alt="humta2.jpg">
+                            </a>
+                        </div>
                         <div class="gallery-one__card">
-                            <img src="images/treks/hampta-pass-trek.jpeg" height="189rem" alt="bighorn">
+                            <a href="images/treks/hampta-pass-trek.jpeg" data-title="hampta-pass-trek.jpeg"
+                                class="gallery-link">
+                                <img src="images/treks/hampta-pass-trek.jpeg" height="189rem"
+                                    alt="hampta-pass-trek.jpeg">
+                            </a>
+                        </div>
+                    </div>
 
-                        </div><!-- /.gallery-one__card -->
-                    </div><!-- /.col-lg-3 -->
                     <div class="col-lg-2">
                         <div class="gallery-one__card">
-                            <img src="images/treks/flower6.jpg" height="400rem" alt="bighorn">
+                            <a href="images/treks/flower6.jpg" data-title="flower6.jpg" class="gallery-link">
+                                <img src="images/treks/flower6.jpg" height="400rem" alt="flower6.jpg">
+                            </a>
+                        </div>
+                    </div>
 
-                        </div><!-- /.gallery-one__card -->
-                    </div><!-- /.col-lg-2 -->
                     <div class="col-lg-4">
                         <div class="gallery-one__card">
-                            <img src="images/treks/Valley-of-flower.jpeg" height="400rem" alt="bighorn">
+                            <a href="images/treks/Valley-of-flower.jpeg" data-title="Valley-of-flower.jpeg"
+                                class="gallery-link">
+                                <img src="images/treks/Valley-of-flower.jpeg" height="400rem"
+                                    alt="Valley-of-flower.jpeg">
+                            </a>
+                        </div>
+                    </div>
 
-                        </div><!-- /.gallery-one__card -->
-                    </div><!-- /.col-lg-4 -->
                     <div class="col-lg-3">
                         <div class="gallery-one__card">
-                            <img src="images/treks/lake2.jpg" height="400rem" alt="bighorn">
-
-                        </div><!-- /.gallery-one__card -->
-                    </div><!-- /.col-lg-3 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- gallery-one -->
+                            <a href="images/treks/lake2.jpg" data-title="lake2.jpg" class="gallery-link">
+                                <img src="images/treks/lake2.jpg" height="400rem" alt="lake2.jpg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- gallery-one -->
 
         <!-- gallery end -->
         <section class="faq-section">
@@ -741,24 +970,22 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-12 wow fadeInLeft" data-wow-delay="00ms">
                             <div class="sec-title text-left">
-                                <h3 class="sec-title__title bw-split-in-left">Some Question <br>About Us</h3>
+                                <h3 class="sec-title__title bw-split-in-left">Frequently Asked <br>Question</h3>
                             </div>
                             <div class="destination-details__accordion bighorn-accrodion"
                                 data-grp-name="bighorn-accrodion">
                                 <div class="accrodion active">
                                     <div class="accrodion-title">
                                         <h4>
-                                            How To Boost Media Performance On A Budget?
+                                            What documents do I need for the trek?
                                             <span class="accrodion-title__icon"></span>
                                         </h4>
                                     </div>
                                     <div class="accrodion-content">
                                         <div class="inner">
                                             <p>
-                                                Orttitor auctor dapibus. Mauris tempor tortor non consectetur luctus. Ut
-                                                sit amet porta metus. Cras a<br> mivelmaximnibhprofessor at
-                                                Hampden-Sydney College in<br>
-                                                Virginia, loositesstill in their
+                                                Valid government-issued photo ID, medical certificate (if required), and
+                                                signed indemnity form.
                                             </p>
                                         </div>
                                     </div>
@@ -766,17 +993,16 @@
                                 <div class="accrodion">
                                     <div class="accrodion-title">
                                         <h4>
-                                            As designers the responsibility?
+                                            What fitness level is required for trekking?
                                             <span class="accrodion-title__icon"></span>
                                         </h4>
                                     </div>
                                     <div class="accrodion-content">
                                         <div class="inner">
                                             <p>
-                                                Orttitor auctor dapibus. Mauris tempor tortor non consectetur luctus. Ut
-                                                sit amet porta metus. Cras a<br> mivelmaximnibhprofessor at
-                                                Hampden-Sydney College in<br>
-                                                Virginia, loositesstill in their
+                                                Basic fitness with ability to walk 5-6 hours daily. Start cardio
+                                                training 4-6 weeks before your trek and practice walking with a
+                                                backpack.
                                             </p>
                                         </div>
                                     </div>
@@ -784,17 +1010,15 @@
                                 <div class="accrodion">
                                     <div class="accrodion-title">
                                         <h4>
-                                            Improving Your Team’s Communication?
+                                            What gear do I need to bring?
                                             <span class="accrodion-title__icon"></span>
                                         </h4>
                                     </div>
                                     <div class="accrodion-content">
                                         <div class="inner">
                                             <p>
-                                                Orttitor auctor dapibus. Mauris tempor tortor non consectetur luctus. Ut
-                                                sit amet porta metus. Cras a<br> mivelmaximnibhprofessor at
-                                                Hampden-Sydney College in<br>
-                                                Virginia, loositesstill in their
+                                                Trekking boots, warm clothes, rain gear, backpack, water bottles, and
+                                                headlamp. We provide a detailed packing list after booking.
                                             </p>
                                         </div>
                                     </div>
@@ -802,17 +1026,114 @@
                                 <div class="accrodion">
                                     <div class="accrodion-title">
                                         <h4>
-                                            Where should I incorporate my business?
+                                            Can I rent equipment from you?
                                             <span class="accrodion-title__icon"></span>
                                         </h4>
                                     </div>
                                     <div class="accrodion-content">
                                         <div class="inner">
                                             <p>
-                                                Orttitor auctor dapibus. Mauris tempor tortor non consectetur luctus. Ut
-                                                sit amet porta metus. Cras a<br> mivelmaximnibhprofessor at
-                                                Hampden-Sydney College in<br>
-                                                Virginia, loositesstill in their
+                                                Yes, we provide tents, sleeping bags, jackets, and trekking poles on
+                                                rent. Advance booking required with additional charges.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            What type of food is provided on the trek?
+                                            <span class="accrodion-title__icon"></span>
+                                        </h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                Complete vegetarian meals including breakfast, lunch, snacks and dinner.
+                                                All meals are freshly prepared by experienced cooks with quality
+                                                ingredients.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            What if I get sick during the trek?
+                                            <span class="accrodion-title__icon"></span>
+                                        </h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                Our trained guides carry first aid kits and can handle basic medical
+                                                issues. Serious cases get immediate evacuation to nearest medical
+                                                facility.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            What is your cancellation policy?
+                                            <span class="accrodion-title__icon"></span>
+                                        </h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                Cancellations 15+ days before trek get 90% refund. 7-14 days get 50%
+                                                refund. Less than 7 days get no refund. Weather cancellations get full
+                                                refund.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            Where do we stay during the trek?
+                                            <span class="accrodion-title__icon"></span>
+                                        </h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                High-quality camping tents (shared basis), local guesthouses, or
+                                                homestays depending on the specific trek route and itinerary.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            What is the group size?
+                                            <span class="accrodion-title__icon"></span>
+                                        </h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                Minimum 6 people, maximum 15 people per group to ensure safety and
+                                                personalized attention from our guides.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>
+                                            Is transportation to base camp included?
+                                            <span class="accrodion-title__icon"></span>
+                                        </h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>
+                                                Yes, pickup and drop from nearest major town or railway station is
+                                                included. Exact pickup points shared after booking confirmation.
                                             </p>
                                         </div>
                                     </div>
@@ -825,92 +1146,92 @@
         </section>
 
 
- <footer class="main-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-xl-4 wow fadeInUp " data-wow-delay="00ms">
-					<div class="footer-widget footer-widget--about">
-						<a href="index.html" class="footer-widget__logo">
-							<img src="assets/logo.png" width="185" alt="bighorn HTML Template">
-						</a>
-						<p class="footer-widget__text">
-							Content of a page when looking at layout the<br> point of using lorem the is Ipsum less
-							when<br> looking normal
-						</p>
-						<div class="main-footer__social">
-							<a href="https://facebook.com">
-								<i class="fab fa-facebook-f" aria-hidden="true"></i>
-								<span class="sr-only">Facebook</span>
-							</a>
-							<a href="https://twitter.com">
-								<i class="fab fa-twitter" aria-hidden="true"></i>
-								<span class="sr-only">Twitter</span>
-							</a>
-							<a href="https://linkedin.com">
-								<i class="fab fa-linkedin-in" aria-hidden="true"></i>
-								<span class="sr-only">Linkedin</span>
-							</a>
-							<a href="https://instagram.com">
-								<i class="fab fa-instagram" aria-hidden="true"></i>
-								<span class="sr-only">Instagram</span>
-							</a>
-						</div><!-- /.main-footer__social -->
-					</div><!-- /.footer-widget -->
-				</div><!-- /.col-md-6 -->
-				<div class="col-md-6 col-xl-2 wow fadeInUp" data-wow-delay="100ms">
-					<div class="footer-widget footer-widget--links">
-						<h2 class="footer-widget__title">Quick Links</h2><!-- /.footer-widget__title -->
-						<ul class="list-unstyled footer-widget__links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About us</a></li>
-							<li><a href="destination.html">Destination</a></li>
-							<li><a href="blog-grid-right.html">Blog</a></li>
-							<li><a href="contact.html">Contact Us</a></li>
-						</ul><!-- /.list-unstyled footer-widget__links -->
-					</div><!-- /.footer-widget -->
-				</div><!-- /.col-md-6 -->
-				<div class="col-md-6 col-xl-2 wow fadeInUp" data-wow-delay="200ms">
-					<div class="footer-widget footer-widget--links-two">
-						<h2 class="footer-widget__title">Treks</h2><!-- /.footer-widget__title -->
-						<ul class="list-unstyled footer-widget__links">
-							<li><a href="hampta-pass-trek.html">Hampta Pass</a></li>
-							<li><a href="valley-of-flower.html">Valley of Flower</a></li>
-							<li><a href="beas-kund.html"> Beas Kund</a></li>
-							<li><a href="har-ki-kund.html">Har ki dun</a></li>
-							<li><a href="bhirgu-lake-trek.html">Bhirgu Lake</a></li>
-						</ul><!-- /.list-unstyled footer-widget__links -->
-					</div><!-- /.footer-widget -->
-				</div><!-- /.col-md-6 -->
-				<div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="300ms">
-					<div class="footer-widget footer-widget--gallery">
-						<h2 class="footer-widget__title">Locate Us</h2><!-- /.footer-widget__title -->
-						<div class="footer-widget__gallery">
-							 <div class="uper"  >
-                                <h5 style="font-weight: 400; font-size: 18px ;" > Adress </h5>
-                                <li>Noida uttar Pradesh 201005</li>
-                             </div><!-- /.image-item -->
-                             <div class="lower" >
-                                
-                                 <h5 style="font-weight: 400; font-size: 18px;">Contact</h5>
-                                 <li>8810550515</li>
-                             </div>
-						</div>
-					</div><!-- /.footer-widget -->
-				</div><!-- /.col-md-6 -->
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-        <hr>
-		<div class="main-footer__bottom  wow fadeInUp" data-wow-delay="00ms">
-			<div class="container">
-				<div class="main-footer__bottom__inner">
-					<p class="main-footer__copyright">
-						© Copyright <span class="dynamic-year"></span> by bighorn
-					</p>
-				</div><!-- /.main-footer__inner -->
-			</div><!-- /.container -->
-		</div><!-- /.main-footer__bottom -->
-	</footer><!-- /.main-footer -->
-      
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-xl-4 wow fadeInUp " data-wow-delay="00ms">
+                        <div class="footer-widget footer-widget--about">
+                            <a href="index.html" class="footer-widget__logo">
+                                <img src="assets/logo.png" width="185" alt="bighorn HTML Template">
+                            </a>
+                            <p class="footer-widget__text">
+                                Content of a page when looking at layout the<br> point of using lorem the is Ipsum less
+                                when<br> looking normal
+                            </p>
+                            <div class="main-footer__social">
+                                <a href="https://facebook.com">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                    <span class="sr-only">Facebook</span>
+                                </a>
+                                <a href="https://twitter.com">
+                                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                                    <span class="sr-only">Twitter</span>
+                                </a>
+                                <a href="https://linkedin.com">
+                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                    <span class="sr-only">Linkedin</span>
+                                </a>
+                                <a href="https://instagram.com">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                    <span class="sr-only">Instagram</span>
+                                </a>
+                            </div><!-- /.main-footer__social -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-md-6 -->
+                    <div class="col-md-6 col-xl-2 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="footer-widget footer-widget--links">
+                            <h2 class="footer-widget__title">Quick Links</h2><!-- /.footer-widget__title -->
+                            <ul class="list-unstyled footer-widget__links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="destination.html">Destination</a></li>
+                                <li><a href="blog-grid-right.html">Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul><!-- /.list-unstyled footer-widget__links -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-md-6 -->
+                    <div class="col-md-6 col-xl-2 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="footer-widget footer-widget--links-two">
+                            <h2 class="footer-widget__title">Treks</h2><!-- /.footer-widget__title -->
+                            <ul class="list-unstyled footer-widget__links">
+                                <li><a href="hampta-pass-trek.html">Hampta Pass</a></li>
+                                <li><a href="valley-of-flower.html">Valley of Flower</a></li>
+                                <li><a href="beas-kund.html"> Beas Kund</a></li>
+                                <li><a href="har-ki-kund.html">Har ki dun</a></li>
+                                <li><a href="bhirgu-lake-trek.html">Bhirgu Lake</a></li>
+                            </ul><!-- /.list-unstyled footer-widget__links -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-md-6 -->
+                    <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="footer-widget footer-widget--gallery">
+                            <h2 class="footer-widget__title">Locate Us</h2><!-- /.footer-widget__title -->
+                            <div class="footer-widget__gallery">
+                                <div class="uper">
+                                    <h5 style="font-weight: 400; font-size: 18px ;"> Adress </h5>
+                                    <li>Noida uttar Pradesh 201005</li>
+                                </div><!-- /.image-item -->
+                                <div class="lower">
+
+                                    <h5 style="font-weight: 400; font-size: 18px;">Contact</h5>
+                                    <li>8810550515</li>
+                                </div>
+                            </div>
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-md-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+            <hr>
+            <div class="main-footer__bottom  wow fadeInUp" data-wow-delay="00ms">
+                <div class="container">
+                    <div class="main-footer__bottom__inner">
+                        <p class="main-footer__copyright">
+                            © Copyright <span class="dynamic-year"></span> by bighorn
+                        </p>
+                    </div><!-- /.main-footer__inner -->
+                </div><!-- /.container -->
+            </div><!-- /.main-footer__bottom -->
+        </footer><!-- /.main-footer -->
+
         <!-- /.main-footer -->
     </div>
     <!-- nav and hero end -->
@@ -947,7 +1268,7 @@
     </div>
 
 
-   
+
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -1055,6 +1376,68 @@
             document.getElementById("imagePopup").style.display = "none";
         }
     </script>
+
+
+    <!-- for image open on full gallery  -->
+    <script>
+        const galleryLinks = document.querySelectorAll('.gallery-link');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxDownload = document.getElementById('lightboxDownload');
+
+        galleryLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const imgSrc = this.getAttribute('href');
+                const imgTitle = this.getAttribute('data-title');
+                lightboxImage.src = imgSrc;
+                lightboxTitle.textContent = imgTitle;
+                lightboxDownload.href = imgSrc;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        // Optional: Close on ESC key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    </script>
+    <!-- for image open on full gallery  -->
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+       768: {
+        slidesPerView: 2, // Tablet
+      },
+      1024: {
+        slidesPerView: 3 // Desktop
+      }
+    }
+  });
+</script>
+
 </body>
 
 </html>
