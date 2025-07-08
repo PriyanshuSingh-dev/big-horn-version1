@@ -7594,7 +7594,7 @@ h6 {
 }
 @media (max-width: 768px) {
   .hero-one {
-    height: 2rem;
+    height: auto;
      
   }
 }
@@ -11913,8 +11913,8 @@ input[type="number"] {
 --------------------------------------------------------------*/
 .main-footer {
   position: relative;
-  background-color: whitesmoke;
-  color: black;
+  background-color: #111;
+  color: #fff;
   padding-top: 5rem;
 }
 
@@ -12005,7 +12005,7 @@ input[type="number"] {
   outline: none;
   height: 57px;
   background-color: var(--bighorn-white);
-  color: var(--bighorn-text);
+  color: #fff;
   font-size: 14px;
   font-weight: 400;
   padding-left: 30px;
@@ -12064,14 +12064,14 @@ input[type="number"] {
   font-size: 16px;
   font-family: var(--bighorn-heading-font);
   /* color: var(--bighorn-white); */
-  color: black;
+  color: #fff;
 }
 
 .main-footer__social {
   display: flex;
   position: relative;
   gap: 10px;
-  color: black;
+  color: #fff;
 }
 
 .main-footer__social a {
@@ -12083,7 +12083,7 @@ input[type="number"] {
   background-color: rgba(var(--bighorn-white-rgb), 0.3);
   font-size: 10px;
   /* color: var(--bighorn-white); */
-  color: black;
+  color: #fff;
   transition: all 500ms ease;
   border-radius: 5px;
   background-color: #fe6f01;
@@ -12121,7 +12121,7 @@ input[type="number"] {
   font-size: 24px;
   font-weight: 500;
   /* color: var(--bighorn-white); */
-  color: black;
+  color: #fff;
   text-transform: capitalize;
   margin: -4px 0 32px;
 }
@@ -12129,7 +12129,7 @@ input[type="number"] {
 .footer-widget__text {
   line-height: 150%;
   /* color: RGBA(var(--bighorn-white-rgb), 0.5); */
-  color: black;
+  color: #fff;
   margin: 0 0 20px;
 }
 
@@ -12157,7 +12157,7 @@ input[type="number"] {
 .footer-widget__links li {
   font-size: 18px;
   /* color: RGBA(var(--bighorn-white-rgb), 0.5); */
-  color: black;
+  color: #fff;
   line-height: 40px;
   position: relative;
 }
@@ -12286,13 +12286,15 @@ input[type="number"] {
 
 .main-footer--two .footer-widget__title {
   margin: -4px 0 35px;
+  color: #fff;
 }
 
 .main-footer--two .footer-widget__text {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  /* color: rgba(255, 255, 255, 0.5); */
   line-height: 150%;
   margin-bottom: 45px;
   padding-bottom: 0;

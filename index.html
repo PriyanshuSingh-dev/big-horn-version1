@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Two || bighorn || HTML Template For Travel & Tour Booking Agency</title>
+    <title>Home || Big Horn</title>
 
     <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/big-horn-favicon-removebg.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/big-horn-favicon-removebg.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/big-horn-favicon-removebg.png">
 
 
     <!-- fonts -->
@@ -237,11 +237,36 @@
 
 
         /* reel section */
+
+        /* testimonial */
+ .testimonial-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto -50px; /* Push it above name */
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15px;
+    border: 1px solid black;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
     </style>
 
     <!-- new footer  -->
 
     <!-- new footer  -->
+
+ 
+
+ 
 
 </head>
 
@@ -743,109 +768,112 @@
 
         <!-- testimonials start -->
         <section class="testimonials-two mt-5">
-            <div class="sec-title text-center">
-                <h3 class="sec-title__title ">People Talk About Us</h3>
-                <p class="sec-title__text">People love sharing their journeys—amazing views, warm memories <br>s and
-                    stories that bring each adventure to life.</p>
+    <div class="sec-title text-center">
+        <h3 class="sec-title__title">People Talk About Us</h3>
+        <p class="sec-title__text">People love sharing their journeys—amazing views, warm memories <br>
+            and stories that bring each adventure to life.</p>
+    </div>
+    <div class="container">
+        <div class="testimonials-two__inner">
+            <div class="testimonials-two__carousel bighorn-owl__carousel bighorn-owl__carousel--basic-nav bighorn-owl__carousel--with-shadow owl-carousel"
+                data-owl-options='{
+                    "loop": true,
+                    "items": 1,
+                    "autoplay": true,
+                    "autoplayTimeout": 7000,
+                    "smartSpeed": 1000,
+                    "nav": false,
+                    "dots": true,
+                    "margin": 30
+                }'>
+
+                <div class="item">
+                    <div class="testimonials-two__item">
+                        <div class="testimonials-two__icon">
+                            <i class="flaticon-left-quote"></i>
+                        </div>
+                        <p class="testimonials-two__text">Brahmatal was my first trek ever, and I went from “Can
+                            I do this?” to “I never want to come down”, all thanks to Bighorn! They didn’t just
+                            guide us, they vibed with us. Somewhere between sore legs, tough terrains, and
+                            mid-oxygen crises, I found the most dramatic new friends, loud laughter, epic
+                            stargazing, breathtaking mountain views, and the world’s most competitive UNO games
+                            right at the top of the mountain. Bighorn isn’t just about treks, it’s about stories
+                            you’ll keep telling. You’ll laugh, you’ll climb, you’ll maybe cry a little but
+                            you’ll love every second.</p>
+                        <div class="testimonials-two__author text-center">
+                            <div class="testimonial-image">
+                                <img src="images/6ac8c6f1-7127-4bf7-bab8-51c20d4c93be.png" alt="Deeksha Prakash">
+                            </div>
+                            <h5 class="testimonials-two__author__name">Deeksha Prakash</h5>
+                            <span class="testimonials-two__author__dec">Energy Policy Advisor at BRICS YEA and UNECE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="testimonials-two__item">
+                        <div class="testimonials-two__icon">
+                            <i class="flaticon-left-quote"></i>
+                        </div>
+                        <p class="testimonials-two__text">"The cleanups and plogging activities organized during
+                            the trek were hectic but fun. It was amazing to see everyone come together to keep
+                            the trails clean. The slogans, that I still remember helped spread the message of
+                            environmental conservation to other trekkers. I can’t wait to go again. It was my
+                            first trek experience, and TOE made it super cool."</p>
+                        <div class="testimonials-two__author text-center">
+                            <div class="testimonial-image">
+                                <img src="images/6ac8c6f1-7127-4bf7-bab8-51c20d4c93be.png" alt="Sunny Singh">
+                            </div>
+                            <h5 class="testimonials-two__author__name">Sunny Singh</h5>
+                            <span class="testimonials-two__author__dec">Delhi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="testimonials-two__item">
+                        <div class="testimonials-two__icon">
+                            <i class="flaticon-left-quote"></i>
+                        </div>
+                        <p class="testimonials-two__text">"Seeing the impact of our actions firsthand was
+                            incredibly rewarding. During the treks, we collected litter, avoided plastic, and
+                            used sustainable materials, which made a visible difference in the areas and my
+                            mind. The trip made me a more conscious traveler. I now continue these practices and
+                            spread awareness about the importance of sustainability."</p>
+                        <div class="testimonials-two__author text-center">
+                            <div class="testimonial-image">
+                                <img src="images/6ac8c6f1-7127-4bf7-bab8-51c20d4c93be.png" alt="Amit Sharma">
+                            </div>
+                            <h5 class="testimonials-two__author__name">Amit Sharma</h5>
+                            <span class="testimonials-two__author__dec">Lucknow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="testimonials-two__item">
+                        <div class="testimonials-two__icon">
+                            <i class="flaticon-left-quote"></i>
+                        </div>
+                        <p class="testimonials-two__text">"I loved the night sky discussions and the sense of
+                            community. I saw some satellites and the ISS moving. What an experience. TAP made me
+                            realize how small actions can make a big difference in preserving nature."</p>
+                        <div class="testimonials-two__author text-center">
+                            <div class="testimonial-image">
+                                <img src="images/6ac8c6f1-7127-4bf7-bab8-51c20d4c93be.png" alt="Tanya">
+                            </div>
+                            <h5 class="testimonials-two__author__name">Tanya</h5>
+                            <span class="testimonials-two__author__dec">Indore</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="container">
+        </div>
+    </div>
+</section>
 
-                <div class="testimonials-two__inner">
-                    <div class="testimonials-two__carousel bighorn-owl__carousel bighorn-owl__carousel--basic-nav bighorn-owl__carousel--with-shadow owl-carousel"
-                        data-owl-options='{
-                            "loop": true,
-                            "items": 1,
-                            "autoplay": true,
-                            "autoplayTimeout": 7000,
-                            "smartSpeed": 1000,
-                            "nav": false,
-                            "dots": true,
-                            "margin": 30
-                        }'>
-
-                        <div class="item">
-                            <div class="testimonials-two__item">
-                                <div class="testimonials-two__icon">
-                                    <i class="flaticon-left-quote"></i>
-                                </div><!-- /.testimonials-two__icon -->
-                                <p class="testimonials-two__text">Brahmatal was my first trek ever, and I went from “Can
-                                    I do this?” to “I never want to come down”, all thanks to Bighorn! They didn’t just
-                                    guide us, they vibed with us. Somewhere between sore legs, tough terrains, and
-                                    mid-oxygen crises, I found the most dramatic new friends, loud laughter, epic
-                                    stargazing, breathtaking mountain views, and the world’s most competitive UNO games
-                                    right at the top of the mountain. Bighorn isn’t just about treks, it’s about stories
-                                    you’ll keep telling. You’ll laugh, you’ll climb, you’ll maybe cry a little but
-                                    you’ll love every second.</p>
-                                <!-- /.testimonials-two__text -->
-                                <div class="testimonials-two__author">
-                                    <h5 class="testimonials-two__author__name">Deeksha Prakash</h5>
-                                    <!-- /.testimonials-two__author__name -->
-                                    <span class="testimonials-two__author__dec">Energy Policy Advisor at
-                                        BRICS YEA and UNECE</span><!-- /.testimonials-two__author_dec -->
-                                </div><!-- /.testimonials-two__author -->
-                            </div><!-- /.testimonials-two__item -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-two__item">
-                                <div class="testimonials-two__icon">
-                                    <i class="flaticon-left-quote"></i>
-                                </div><!-- /.testimonials-two__icon -->
-                                <p class="testimonials-two__text">"The cleanups and plogging activities organized during
-                                    the trek were hectic but fun. It was amazing to see everyone come together to keep
-                                    the trails clean. The slogans, that I still remember helped spread the message of
-                                    environmental conservation to other trekkers. I can’t wait to go again. It was my
-                                    first trek experience, and
-                                    TOE made it super cool."</p>
-                                <!-- /.testimonials-two__text -->
-                                <div class="testimonials-two__author">
-                                    <h5 class="testimonials-two__author__name">Sunny Singh</h5>
-                                    <!-- /.testimonials-two__author__name -->
-                                    <span
-                                        class="testimonials-two__author__dec">Delhi</span><!-- /.testimonials-two__author_dec -->
-                                </div><!-- /.testimonials-two__author -->
-                            </div><!-- /.testimonials-two__item -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-two__item">
-                                <div class="testimonials-two__icon">
-                                    <i class="flaticon-left-quote"></i>
-                                </div><!-- /.testimonials-two__icon -->
-                                <p class="testimonials-two__text">"Seeing the impact of our actions firsthand was
-                                    incredibly rewarding. During the treks, we collected litter, avoided plastic, and
-                                    used sustainable materials, which made a visible difference in the areas and my
-                                    mind. The trip made me a more conscious traveler. I now continue these practices and
-                                    spread awareness about the importance of sustainability."</p>
-                                <!-- /.testimonials-two__text -->
-                                <div class="testimonials-two__author">
-                                    <h5 class="testimonials-two__author__name">Amit Sharma</h5>
-                                    <!-- /.testimonials-two__author__name -->
-                                    <span class="testimonials-two__author__dec">Lucknow
-                                    </span><!-- /.testimonials-two__author_dec -->
-                                </div><!-- /.testimonials-two__author -->
-                            </div><!-- /.testimonials-two__item -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-two__item">
-                                <div class="testimonials-two__icon">
-                                    <i class="flaticon-left-quote"></i>
-                                </div><!-- /.testimonials-two__icon -->
-                                <p class="testimonials-two__text">"I loved the night sky discussions and the sense of
-                                    community. I saw some satellites and the ISS moving. What an experience. TAP made me
-                                    realize how small actions can make a big difference in preserving nature."</p>
-                                <!-- /.testimonials-two__text -->
-                                <div class="testimonials-two__author">
-                                    <h5 class="testimonials-two__author__name">Tanya </h5>
-                                    <!-- /.testimonials-two__author__name -->
-                                    <span
-                                        class="testimonials-two__author__dec">Indore</span><!-- /.testimonials-two__author_dec -->
-                                </div><!-- /.testimonials-two__author -->
-                            </div><!-- /.testimonials-two__item -->
-                        </div><!-- /.item -->
-                    </div><!-- /.testimonials-two__carousel -->
-                </div><!-- /.testimonials-two__inner -->
-
-            </div><!-- /.container -->
-        </section><!-- /.testimonials-two -->
+        <!-- /.testimonials-two -->
         <!-- gallery two start -->
 
         <!-- iopen image on fullscreen -->
@@ -1152,7 +1180,7 @@
                     <div class="col-md-6 col-xl-4 wow fadeInUp " data-wow-delay="00ms">
                         <div class="footer-widget footer-widget--about">
                             <a href="index.html" class="footer-widget__logo">
-                                <img src="assets/logo.png" width="185" alt="bighorn HTML Template">
+                                <img src="images/Bighornwhite.png" width="185" alt="bighorn HTML Template">
                             </a>
                             <p class="footer-widget__text">
                                 Content of a page when looking at layout the<br> point of using lorem the is Ipsum less
@@ -1207,12 +1235,12 @@
                             <h2 class="footer-widget__title">Locate Us</h2><!-- /.footer-widget__title -->
                             <div class="footer-widget__gallery">
                                 <div class="uper">
-                                    <h5 style="font-weight: 400; font-size: 18px ;"> Adress </h5>
+                                    <h5 style="font-weight: 400; font-size: 18px ; color: #fff;"> Adress </h5>
                                     <li>Noida uttar Pradesh 201005</li>
                                 </div><!-- /.image-item -->
                                 <div class="lower">
 
-                                    <h5 style="font-weight: 400; font-size: 18px;">Contact</h5>
+                                    <h5 style="font-weight: 400; font-size: 18px; color: #fff;">Contact</h5>
                                     <li>8810550515</li>
                                 </div>
                             </div>
